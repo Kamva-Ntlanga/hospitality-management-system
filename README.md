@@ -1,2 +1,2 @@
 # hospitality-management-system
-A comprehensive hotel operations management system for small to medium hotels
+An integrated hotel operations management platform tailored for small and medium-sized hospitality establishments
