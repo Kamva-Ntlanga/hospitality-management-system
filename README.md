@@ -1,30 +1,51 @@
 # Hospitality Management System
 
-A comprehensive hotel operations platform designed to streamline front desk operations, room management, booking processing, and guest services for modern hospitality businesses.
+A comprehensive hotel operations management system designed to streamline front desk operations, room inventory management, booking processing, and housekeeping coordination for small to medium-sized hotels.
 
-## Project Description
+## 📋 Project Description
 
-The Hospitality Management System is an end-to-end solution that digitizes and automates core hotel operations. This system enables hotel staff to manage room inventory, process reservations, handle check-ins/check-outs, and provide better guest experiences through integrated services. The platform is designed for boutique hotels and small-to-medium hotel chains looking to modernize their operations.
+The Hospitality Management System digitizes and automates core hotel operations, enabling hotel staff to manage room inventory, process reservations, handle check-ins/check-outs, and provide better guest experiences through integrated services. This platform eliminates manual processes, reduces errors, and improves operational efficiency.
 
-## Documentation
+## 📚 Documentation
 
-- [System Specification](./SPECIFICATION.md)
-- [Architectural Documentation](./ARCHITECTURE.md)
+- [System Specification](./SPECIFICATION.md) - Detailed requirements, functional and non-functional specifications
+- [Architecture Documentation](./ARCHITECTURE.md) - C4 architectural diagrams and system design
 
-## Key Features
+## ✨ Key Features
 
-- Room inventory management
-- Online and offline booking processing
-- Guest check-in/check-out workflows
-- Billing and invoice generation
-- Housekeeping task management
-- Guest service requests
-- Reporting and analytics
+- **Room Management**: Track inventory, room types, rates, and availability
+- **Booking Engine**: Process reservations, modifications, and cancellations
+- **Guest Management**: Maintain guest profiles and stay history
+- **Front Desk Operations**: Digital check-in/check-out workflows
+- **Billing & Payments**: Invoice generation and payment processing
+- **Housekeeping Coordination**: Task assignment and status tracking
+- **Reporting & Analytics**: Occupancy reports, revenue analysis
 
-## Technology Stack (Planned)
+## 🏗️ Planned Technology Stack
 
-- **Frontend:** React.js with TypeScript
-- **Backend:** Node.js/Express or Python/Django
-- **Database:** PostgreSQL
-- **Caching:** Redis
-- **Deployment:** Docker + AWS/Azure
+| Layer | Technology |
+|-------|------------|
+| Frontend | React.js with TypeScript |
+| Mobile | React Native |
+| Backend | Node.js/Express |
+| Database | PostgreSQL |
+| Caching | Redis |
+| Payment Integration | Stripe API |
+| Email Service | SendGrid |
+| Deployment | Docker, AWS/Azure |
+
+## 👥 Stakeholders
+
+- Hotel Guests
+- Front Desk Staff
+- Hotel Managers
+- Housekeeping Staff
+- System Administrators
+
+## 🎯 Project Status
+
+Currently in **design and specification phase**. See the documentation links above for detailed system requirements and architecture.
+
+## 📝 License
+
+This project is created for educational purposes as part of a Software Engineering assignment.
