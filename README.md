@@ -46,6 +46,13 @@ The Hospitality Management System digitizes and automates core hotel operations,
 
 Currently in **design and specification phase**. See the documentation links above for detailed system requirements and architecture.
 
+## 👤 Author Information
+
+**Name:** Kamva Ntlanga
+**Student ID:** 240497821
+**Course:** Software Engineering
+**Date:** March 8, 2026
+
 ## 📝 License
 
 This project is created for educational purposes as part of a Software Engineering assignment.
