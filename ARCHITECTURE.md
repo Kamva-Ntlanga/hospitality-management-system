@@ -28,6 +28,8 @@ graph TD
     S1 -->|"Syncs availability with booking platforms"| E3["Calendar Integration (External)<br>Google Calendar/Booking.com"]
 ```
 
+
+
 ```mermaid
 graph TD
     User1["Hotel Guest<br>End user"] --> C1["Web Application<br>React SPA<br>Guest portal for booking"]
