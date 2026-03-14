@@ -19,30 +19,14 @@ The system focuses on core hotel operations (front desk, reservations, room mana
 ## Context Diagram (Level 1)
 
 ```mermaid
-C4Context
-    title System Context diagram for Hospitality Management System
-    
-    Person(guest, "Hotel Guest", "Person staying at or booking a hotel room")
-    Person(frontDesk, "Front Desk Staff", "Handles check-in/out and guest services")
-    Person(manager, "Hotel Manager", "Oversees operations and reviews reports")
-    Person(housekeeping, "Housekeeping Staff", "Cleans rooms and updates status")
-    
-    System(hms, "Hospitality Management System", "Core platform for hotel operations")
-    
-    System_Ext(paymentGateway, "Payment Gateway", "Processes credit card transactions")
-    System_Ext(emailService, "Email Service", "Sends booking confirmations")
-    System_Ext(calendarAPI, "Calendar Integration", "Sync with external booking platforms")
-    
-    Rel(guest, hms, "Makes reservations, views bookings")
-    Rel(frontDesk, hms, "Manages check-in/out, bookings")
-    Rel(manager, hms, "Views reports, manages rates")
-    Rel(housekeeping, hms, "Updates room cleaning status")
-    
-    Rel(hms, paymentGateway, "Process payments via")
-    Rel(hms, emailService, "Sends notifications via")
-    Rel(hms, calendarAPI, "Syncs availability with")
-    
-    UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")
+graph TD
+    Guest["Hotel Guest"] -->|books rooms| HMS["Hospitality Management System"]
+    FrontDesk["Front Desk Staff"] -->|manages check-in/out| HMS
+    Manager["Hotel Manager"] -->|views reports| HMS
+    Housekeeping["Housekeeping Staff"] -->|updates room status| HMS
+    HMS -->|processes payments| Payment["Payment Gateway"]
+    HMS -->|sends confirmations| Email["Email Service"]
+    HMS -->|syncs availability| Calendar["Calendar Integration"]
 
 Container Diagram (Level 2)
 graph TD
@@ -241,52 +225,3 @@ flowchart TD
     
     Book -->|sends| Email[Email Notification]
     Book -->|processes| Pay[Payment]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
