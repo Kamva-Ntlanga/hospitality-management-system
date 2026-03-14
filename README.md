@@ -49,8 +49,11 @@ Currently in **design and specification phase**. See the documentation links abo
 ##  Author Information
 
 **Name:** Kamva Ntlanga
+
 **Student ID:** 240497821
+
 **Course:** Software Engineering
+
 **Date:** March 8, 2026
 
 ##  License
