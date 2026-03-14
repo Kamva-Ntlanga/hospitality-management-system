@@ -53,6 +53,6 @@ Currently in **design and specification phase**. See the documentation links abo
 **Course:** Software Engineering
 **Date:** March 8, 2026
 
-## 📝 License
+##  License
 
 This project is created for educational purposes as part of a Software Engineering assignment.
