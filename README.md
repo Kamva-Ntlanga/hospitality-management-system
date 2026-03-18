@@ -11,6 +11,19 @@ The Hospitality Management System digitizes and automates core hotel operations,
 - [System Specification](./SPECIFICATION.md) - Detailed requirements, functional and non-functional specifications
 - [Architecture Documentation](./ARCHITECTURE.md) - C4 architectural diagrams and system design
 
+##  Assignment 4: Stakeholder and System Requirements
+
+ Builds on the Hospitality Management System with detailed stakeholder analysis and requirements documentation.
+
+##   Documentation for Assignment 4
+
+- [Stakeholder Analysis](./STAKEHOLDER-ANALYSIS.md) - 8 stakeholders with roles, concerns, pain points, and success metrics
+- [Functional Requirements](./FUNCTIONAL-REQUIREMENTS.md) - 16 functional requirements with acceptance criteria
+- [Non-Functional Requirements](./NON-FUNCTIONAL-REQUIREMENTS.md) - 17 requirements across usability, security, scalability, and more
+- [Reflection on Stakeholder Balance](./REFLECTION.md) - Challenges and trade-offs in requirements engineering
+
+---
+
 ##  Key Features
 
 - **Room Management**: Track inventory, room types, rates, and availability
