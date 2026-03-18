@@ -1,36 +1,39 @@
+# Hospitality Management System
 
 A comprehensive hotel operations management system designed to streamline front desk operations, room inventory management, booking processing, and housekeeping coordination for small to medium-sized hotels.
 
 ##  Project Description
-##  Project Description
 
 The Hospitality Management System digitizes and automates core hotel operations, enabling hotel staff to manage room inventory, process reservations, handle check-ins/check-outs, and provide better guest experiences through integrated services. This platform eliminates manual processes, reduces errors, and improves operational efficiency.
 
-##  Documentation
 ##  Documentation
 
 - [System Specification](./SPECIFICATION.md) - Detailed requirements, functional and non-functional specifications
 - [Architecture Documentation](./ARCHITECTURE.md) - C4 architectural diagrams and system design
 
 ##  Key Features
-##  Key Features
 
 - **Room Management**: Track inventory, room types, rates, and availability
 - **Booking Engine**: Process reservations, modifications, and cancellations
-@@ -21,7 +21,7 @@ The Hospitality Management System digitizes and automates core hotel operations,
+- **Guest Management**: Maintain guest profiles and stay history
+- **Front Desk Operations**: Digital check-in/check-out workflows
+- **Billing & Payments**: Invoice generation and payment processing
 - **Housekeeping Coordination**: Task assignment and status tracking
 - **Reporting & Analytics**: Occupancy reports, revenue analysis
 
 ##  Planned Technology Stack
-##  Planned Technology Stack
 
 | Layer | Technology |
 |-------|------------|
-@@ -34,19 +34,19 @@ The Hospitality Management System digitizes and automates core hotel operations,
+| Frontend | React.js with TypeScript |
+| Mobile | React Native |
+| Backend | Node.js/Express |
+| Database | PostgreSQL |
+| Caching | Redis |
+| Payment Integration | Stripe API |
 | Email Service | SendGrid |
 | Deployment | Docker, AWS/Azure |
 
-##  Stakeholders
 ##  Stakeholders
 
 - Hotel Guests
@@ -40,12 +43,19 @@ The Hospitality Management System digitizes and automates core hotel operations,
 - System Administrators
 
 ##  Project Status
-##  Project Status
 
 Currently in **design and specification phase**. See the documentation links above for detailed system requirements and architecture.
 
 ##  Author Information
-##  Author Information
 
 **Name:** Kamva Ntlanga
+
 **Student ID:** 240497821
+
+**Course:** Software Engineering
+
+**Date:** March 8, 2026
+
+##  License
+
+This project is created for educational purposes as part of a Software Engineering assignment.
