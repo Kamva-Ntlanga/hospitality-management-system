@@ -1,1 +1,20 @@
+# Assignment 4: Stakeholder Analysis
+## Project: Hospitality Management System
 
+| Stakeholder | Role | Key Concerns | Pain Points | Success Metrics |
+|------------|------|--------------|-------------|-----------------|
+| **Hotel Guests** | End-users who book rooms, check in/out, and use hotel services | • Easy room search and booking<br>• Transparent pricing with no hidden fees<br>• Quick check-in/out process<br>• Ability to request services | • Having to call reception for simple requests<br>• Long queues at check-in/out<br>• Unclear room availability<br>• Lost booking confirmations | • 50% reduction in check-in time<br>• 30% increase in self-service usage<br>• 4.5+ star rating for booking experience |
+| **Front Desk Staff** | Daily operators managing guest check-in/out, room assignments, and guest requests | • Quick access to guest information<br>• Efficient room assignment<br>• Clear visibility of room status<br>• Easy request management | • Manual paperwork duplication<br>• Difficulty finding available rooms quickly<br>• Guest complaints about wait times<br>• Multiple systems to check | • 40% faster check-in process<br>• 60% reduction in manual errors<br>• 25% more guests served per shift |
+| **Hotel Manager** | Oversees hotel operations, revenue management, and staff performance | • Real-time occupancy monitoring<br>• Revenue optimization<br>• Staff performance tracking<br>• Guest satisfaction metrics | • Delayed reporting<br>• Difficulty tracking revenue leaks<br>• No real-time alerts for issues<br>• Manual report generation | • 15% increase in occupancy rate<br>• 20% improvement in RevPAR<br>• Real-time dashboard access 24/7 |
+| **Housekeeping Staff** | Responsible for room cleaning and maintenance | • Clear priority of rooms to clean<br>• Real-time room status updates<br>• Ability to report maintenance issues<br>• Efficient task allocation | • Unclear which rooms are check-outs<br>• Duplicate cleaning efforts<br>• Delayed maintenance reporting<br>• No mobile access | • 30% faster room turnover<br>• 50% faster maintenance reporting<br>• 100% accurate room status |
+| **IT Administrator** | Manages system infrastructure, security, and integrations | • System uptime and reliability<br>• Data security and backups<br>• Easy user management<br>• Integration with existing systems | • Downtime during peak hours<br>• Security vulnerability concerns<br>• Complex user permission management<br>• Difficult troubleshooting | • 99.9% system uptime<br>• Zero security breaches<br>• < 1 hour incident response time |
+| **Finance Department** | Handles billing, payments, and financial reporting | • Accurate payment processing<br>• Clear audit trails<br>• Integration with accounting software<br>• Fraud prevention | • Payment discrepancies<br>• Manual reconciliation work<br>• Delayed revenue reporting<br>• Chargeback issues | • 100% payment accuracy<br>• 80% faster monthly closing<br>• Zero unreconciled transactions |
+| **Restaurant Manager** | Manages hotel dining and room service | • Integration with room service orders<br>• Table/reservation management<br>• Billing to rooms<br>• Peak time preparation | • Missed room service orders<br>• Delayed billing to rooms<br>• Double bookings<br>• Kitchen-staff coordination | • 25% increase in room service revenue<br>• 50% faster order-to-delivery<br>• Zero billing errors |
+| **Marketing Team** | Promotes hotel and manages online presence | • Integration with OTAs (Booking.com, etc.)<br>• Promotional campaign management<br>• Guest data for targeting<br>• Review monitoring | • Manual rate updates across OTAs<br>• Difficulty tracking campaign ROI<br>• Limited guest insight data<br>• Slow response to reviews | • 30% increase in direct bookings<br>• Real-time OTA rate sync<br>• 40% better campaign targeting |
+
+### Stakeholder Summary
+- **Total Stakeholders Identified:** 8
+- **Primary Users:** Hotel Guests, Front Desk Staff, Housekeeping Staff
+- **Management/Administrative:** Hotel Manager, Finance Department, Marketing Team
+- **Technical/Support:** IT Administrator
+- **Ancillary Services:** Restaurant Manager
