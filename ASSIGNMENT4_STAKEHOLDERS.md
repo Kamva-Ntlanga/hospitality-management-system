@@ -1,20 +1,80 @@
-# Assignment 4: Stakeholder Analysis
-## Project: Hospitality Management System
+# Stakeholder Analysis: Hospitality Management System
 
-| Stakeholder | Role | Key Concerns | Pain Points | Success Metrics |
-|------------|------|--------------|-------------|-----------------|
-| **Hotel Guests** | End-users who book rooms, check in/out, and use hotel services | • Easy room search and booking<br>• Transparent pricing with no hidden fees<br>• Quick check-in/out process<br>• Ability to request services | • Having to call reception for simple requests<br>• Long queues at check-in/out<br>• Unclear room availability<br>• Lost booking confirmations | • 50% reduction in check-in time<br>• 30% increase in self-service usage<br>• 4.5+ star rating for booking experience |
-| **Front Desk Staff** | Daily operators managing guest check-in/out, room assignments, and guest requests | • Quick access to guest information<br>• Efficient room assignment<br>• Clear visibility of room status<br>• Easy request management | • Manual paperwork duplication<br>• Difficulty finding available rooms quickly<br>• Guest complaints about wait times<br>• Multiple systems to check | • 40% faster check-in process<br>• 60% reduction in manual errors<br>• 25% more guests served per shift |
-| **Hotel Manager** | Oversees hotel operations, revenue management, and staff performance | • Real-time occupancy monitoring<br>• Revenue optimization<br>• Staff performance tracking<br>• Guest satisfaction metrics | • Delayed reporting<br>• Difficulty tracking revenue leaks<br>• No real-time alerts for issues<br>• Manual report generation | • 15% increase in occupancy rate<br>• 20% improvement in RevPAR<br>• Real-time dashboard access 24/7 |
-| **Housekeeping Staff** | Responsible for room cleaning and maintenance | • Clear priority of rooms to clean<br>• Real-time room status updates<br>• Ability to report maintenance issues<br>• Efficient task allocation | • Unclear which rooms are check-outs<br>• Duplicate cleaning efforts<br>• Delayed maintenance reporting<br>• No mobile access | • 30% faster room turnover<br>• 50% faster maintenance reporting<br>• 100% accurate room status |
-| **IT Administrator** | Manages system infrastructure, security, and integrations | • System uptime and reliability<br>• Data security and backups<br>• Easy user management<br>• Integration with existing systems | • Downtime during peak hours<br>• Security vulnerability concerns<br>• Complex user permission management<br>• Difficult troubleshooting | • 99.9% system uptime<br>• Zero security breaches<br>• < 1 hour incident response time |
-| **Finance Department** | Handles billing, payments, and financial reporting | • Accurate payment processing<br>• Clear audit trails<br>• Integration with accounting software<br>• Fraud prevention | • Payment discrepancies<br>• Manual reconciliation work<br>• Delayed revenue reporting<br>• Chargeback issues | • 100% payment accuracy<br>• 80% faster monthly closing<br>• Zero unreconciled transactions |
-| **Restaurant Manager** | Manages hotel dining and room service | • Integration with room service orders<br>• Table/reservation management<br>• Billing to rooms<br>• Peak time preparation | • Missed room service orders<br>• Delayed billing to rooms<br>• Double bookings<br>• Kitchen-staff coordination | • 25% increase in room service revenue<br>• 50% faster order-to-delivery<br>• Zero billing errors |
-| **Marketing Team** | Promotes hotel and manages online presence | • Integration with OTAs (Booking.com, etc.)<br>• Promotional campaign management<br>• Guest data for targeting<br>• Review monitoring | • Manual rate updates across OTAs<br>• Difficulty tracking campaign ROI<br>• Limited guest insight data<br>• Slow response to reviews | • 30% increase in direct bookings<br>• Real-time OTA rate sync<br>• 40% better campaign targeting |
+**Author:** Your Full Name
+**Date:** March 18, 2026
+**Course:** Software Engineering
+**Assignment:** 4 - Stakeholder and System Requirements Documentation
 
-### Stakeholder Summary
-- **Total Stakeholders Identified:** 8
-- **Primary Users:** Hotel Guests, Front Desk Staff, Housekeeping Staff
-- **Management/Administrative:** Hotel Manager, Finance Department, Marketing Team
-- **Technical/Support:** IT Administrator
-- **Ancillary Services:** Restaurant Manager
+## Overview
+
+This document identifies and analyzes the key stakeholders for the Hospitality Management System. Each stakeholder's role, concerns, pain points, and success metrics are documented to ensure the system requirements address real user needs.
+
+---
+
+## Stakeholder Analysis Table
+
+| # | Stakeholder | Role | Key Concerns | Pain Points | Success Metrics |
+|---|-------------|------|--------------|-------------|-----------------|
+| 1 | **Hotel Guests** | End-users who book rooms, check in/out, and receive services during their stay | • Easy and fast booking process<br>• Accurate room availability<br>• Secure payment processing<br>• Quick check-in/out<br>• Ability to make special requests | • Double-bookings causing reservation issues<br>• Long check-in queues upon arrival<br>• No confirmation emails leading to uncertainty<br>• Difficulty modifying or canceling bookings<br>• Hidden fees not shown during booking | • 95% of guests rate booking process 4/5 stars<br>• Check-in time under 3 minutes<br>• 50% reduction in booking-related complaints<br>• 30% increase in online bookings |
+| 2 | **Front Desk Staff** | Handle check-in/check-out, manage reservations, assist guests, and coordinate with housekeeping | • Quick access to guest information<br>• Efficient check-in/out workflows<br>• Real-time room status updates<br>• Easy reservation modifications<br>• Clear billing and payment processing | • Manual paperwork slowing down check-ins<br>• Calling housekeeping to check room status<br>• Guests waiting while system loads<br>• Difficult to find past guest history<br>• Payment processing errors | • Check-in time reduced from 10 to 3 minutes<br>• 100% accurate room assignments<br>• 40% faster guest service resolution<br>• Zero manual data entry errors |
+| 3 | **Hotel Managers** | Oversee daily operations, set room rates, analyze occupancy, generate reports, and make strategic decisions | • Real-time occupancy and revenue data<br>• Demand forecasting for pricing<br>• Staff performance tracking<br>• Identifying peak/off-peak patterns<br>• Integration with OTAs (Booking.com, Expedia) | • Waiting days for occupancy reports<br>• Manual Excel work for revenue analysis<br>• No visibility into future demand<br>• Channel conflicts with online travel agencies<br>• Difficulty tracking housekeeping efficiency | • Real-time dashboard with <5 second refresh<br>• 20% increase in revenue through dynamic pricing<br>• 100% accurate nightly audit reports<br>• 15% improvement in staff productivity |
+| 4 | **Housekeeping Staff** | Clean rooms, update room status, report maintenance issues, and prepare rooms for new guests | • Clear daily task lists<br>• Quick room status updates<br>• Ability to report maintenance issues<br>• Prioritization of check-out vs stayover rooms<br>• Mobile-friendly interface | • Walking to front desk to update room status<br>• Unclear which rooms need priority cleaning<br>• Double-work when rooms are incorrectly marked dirty<br>• No way to report maintenance issues digitally<br>• Paper lists getting lost | • Room turnover time reduced by 25%<br>• 100% accurate room status updates<br>• 50% faster maintenance issue reporting<br>• Zero missed rooms due to lost paper lists |
+| 5 | **IT Administrators** | Manage system access, maintain servers, ensure security, handle backups, and troubleshoot issues | • System uptime and reliability<br>• User access control and permissions<br>• Data backup and recovery<br>• Security against breaches<br>• Easy deployment of updates | • Frequent system crashes during peak hours<br>• Difficulty resetting user passwords<br>• Manual backup processes<br>• No audit logs for troubleshooting<br>• Complex server configuration | • 99.9% system uptime during operational hours<br>• Automated daily backups with 15-minute RPO<br>• 30-minute average issue resolution time<br>• Zero security breaches |
+| 6 | **Finance/Accounting Staff** | Manage billing, process payments, handle refunds, reconcile accounts, and generate financial reports | • Accurate invoice generation<br>• Integration with accounting software<br>• Tax calculation compliance<br>• Refund and chargeback handling<br>• Revenue reconciliation | • Manual invoice creation taking hours<br>• Discrepancies between bookings and payments<br>• Complex tax calculations for different regions<br>• No payment failure notifications<br>• Time-consuming month-end reconciliation | • 100% accurate automated invoices<br>• 50% reduction in billing discrepancies<br>• Automated tax calculations with 99.9% accuracy<br>• 80% faster month-end closing |
+| 7 | **Marketing Team** | Promote hotel, manage online presence, analyze booking trends, and run promotional campaigns | • Understanding booking sources/channels<br>• Guest demographic data<br>• Seasonal booking patterns<br>• Campaign performance tracking<br>• Integration with CRM | • No visibility into which channels drive bookings<br>• Limited guest data for targeted marketing<br>• Unable to track promotion effectiveness<br>• Manual data extraction for reports<br>• No integration with email marketing tools | • 25% increase in direct bookings<br>• 40% better targeting of marketing campaigns<br>• Real-time channel performance dashboard<br>• 50% improvement in campaign ROI |
+| 8 | **External Partners (OTAs)** | Third-party booking platforms (Booking.com, Expedia, Agoda) that need real-time availability sync | • Real-time room availability updates<br>• Accurate rate synchronization<br>• Confirmed booking delivery<br>• No overbookings from multiple channels<br>• API reliability | • Delayed availability causing rejected bookings<br>• Rate discrepancies leading to guest complaints<br>• Lost booking data during API failures<br>• Double-bookings from channel conflicts<br>• Manual rate updates across platforms | • 100% real-time availability sync<br>• Zero overbookings from channel conflicts<br>• 99.9% API uptime<br>• Instant booking confirmation delivery |
+
+---
+
+## Stakeholder Prioritization Matrix
+
+| Stakeholder | Power/Influence | Interest | Priority Level |
+|-------------|-----------------|----------|----------------|
+| Hotel Guests | High | High | **Critical** |
+| Hotel Managers | High | High | **Critical** |
+| Front Desk Staff | Medium | High | **High** |
+| IT Administrators | High | Medium | **High** |
+| Housekeeping Staff | Low | High | **Medium** |
+| Finance/Accounting | Medium | Medium | **Medium** |
+| Marketing Team | Low | Medium | **Low** |
+| External Partners | Medium | Low | **Low** |
+
+---
+
+## Stakeholder-Requirement Traceability Matrix
+
+| Requirement ID | Requirement Description | Primary Stakeholder(s) | Secondary Stakeholder(s) |
+|----------------|------------------------|------------------------|--------------------------|
+| FR-01 | Online room search | Hotel Guests | Marketing |
+| FR-02 | Booking management | Hotel Guests, Front Desk | Managers |
+| FR-03 | Room status updates | Housekeeping, Front Desk | Managers |
+| FR-04 | Payment processing | Guests, Finance | Front Desk |
+| FR-05 | Reporting dashboard | Managers, Finance | Marketing |
+| FR-06 | User access control | IT Admin | All staff |
+| FR-07 | OTA integration | Managers, External Partners | IT Admin |
+| FR-08 | Check-in/out workflow | Front Desk, Guests | Housekeeping |
+| FR-09 | Maintenance requests | Housekeeping, Maintenance | Managers |
+| FR-10 | Guest profile management | Front Desk, Marketing | Managers |
+
+---
+
+## Key Stakeholder Conflicts and Trade-offs
+
+| Conflicting Stakeholders | Issue | Proposed Balance |
+|--------------------------|-------|------------------|
+| Guests (fast booking) vs IT Admin (security) | Guests want 1-click booking; IT needs security checks | Implement 2FA only for first-time users; return guests get streamlined process |
+| Managers (detailed data) vs Guests (privacy) | Managers want guest data for analytics; guests want privacy | Anonymize data for analytics; obtain consent for marketing |
+| Housekeeping (mobile app) vs IT Admin (device cost) | Housekeeping needs mobile devices; IT has budget constraints | Provide shared tablets per floor; implement BYOD policy with security |
+| Front Desk (quick check-in) vs Finance (payment verification) | Front desk wants instant check-in; Finance needs payment confirmation | Real-time payment verification with cached results for returning guests |
+
+---
+
+## Stakeholder Validation Checklist
+
+- [x] All identified stakeholders interact with or are impacted by the system
+- [x] Each stakeholder has clearly defined role
+- [x] Concerns are specific and actionable
+- [x] Pain points reflect real-world frustrations
+- [x] Success metrics are measurable
+- [x] Stakeholder conflicts are identified
+- [x] Requirements can be traced back to stakeholders
