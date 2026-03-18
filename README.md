@@ -17,10 +17,10 @@ The Hospitality Management System digitizes and automates core hotel operations,
 
 ##   Documentation for Assignment 4
 
-- [Stakeholder Analysis](./STAKEHOLDER-ANALYSIS.md) - 8 stakeholders with roles, concerns, pain points, and success metrics
-- [Functional Requirements](./FUNCTIONAL-REQUIREMENTS.md) - 16 functional requirements with acceptance criteria
+- [Stakeholder Analysis](./stakeholder-analysis.md) - 8 stakeholders with roles, concerns, pain points, and success metrics
+- [Functional Requirements](./FUNCTIONAL%20-%20REQUIREMENTS.m) - 16 functional requirements with acceptance criteria
 - [Non-Functional Requirements](./NON-FUNCTIONAL-REQUIREMENTS.md) - 17 requirements across usability, security, scalability, and more
-- [Reflection on Stakeholder Balance](./REFLECTION.md) - Challenges and trade-offs in requirements engineering
+- [Reflection](./REFLECTION.md) - Challenges and trade-offs in requirements engineering
 
 ---
 
