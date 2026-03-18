@@ -197,3 +197,321 @@ This document defines 12 functional requirements for the HotelHub system. Each r
 - **Total Functional Requirements:** 12
 - **Requirements with Acceptance Criteria:** 12 (100%)
 - **Stakeholders Addressed:** All 8 stakeholders covered
+
+## Non-Functional Requirements
+
+### Usability
+
+#### NFR-U1: Mobile Responsiveness
+**Description:** The system shall provide a fully responsive interface that adapts to mobile, tablet, and desktop screens.
+
+**Acceptance Criteria:**
+- All features accessible on screens as small as 320px wide
+- Touch-friendly buttons (minimum 44x44px tap target)
+- No horizontal scrolling required
+- Consistent experience across iOS and Android browsers
+- Layout automatically adjusts to screen orientation changes
+
+**Category:** Usability
+
+---
+
+#### NFR-U2: Accessibility Compliance
+**Description:** The system shall comply with WCAG 2.1 AA accessibility standards.
+
+**Acceptance Criteria:**
+- Screen reader compatibility for all forms
+- Color contrast ratio of at least 4.5:1 for normal text
+- Keyboard navigable without mouse
+- Alternative text for all images
+- Focus indicators visible for all interactive elements
+
+**Category:** Usability
+
+---
+
+#### NFR-U3: Multilingual Support
+**Description:** The system shall support multiple languages for guest-facing interfaces.
+
+**Acceptance Criteria:**
+- Minimum 3 languages at launch (English, Spanish, French)
+- Easy language switching without re-login
+- Right-to-left language support where applicable
+- All system messages translated
+- Date, time, and currency formats localized
+
+**Category:** Usability
+
+---
+
+### Deployability
+
+#### NFR-D1: Cross-Platform Deployment
+**Description:** The system shall be deployable on both Windows and Linux servers.
+
+**Acceptance Criteria:**
+- Docker container support for consistent deployment
+- Configuration management via environment variables
+- Zero platform-specific code
+- Deployment documentation for both OS options
+- One-command deployment script provided
+
+**Category:** Deployability
+
+---
+
+#### NFR-D2: One-Click Backup/Restore
+**Description:** The system shall provide automated backup and simple restoration procedures.
+
+**Acceptance Criteria:**
+- Daily automated backups
+- Point-in-time recovery capability (last 30 days)
+- Backup encryption before storage
+- Tested restoration procedure documented
+- Backup verification alerts
+
+**Category:** Deployability
+
+---
+
+#### NFR-D3: CI/CD Pipeline Ready
+**Description:** The system shall support continuous integration and deployment workflows.
+
+**Acceptance Criteria:**
+- Automated testing before deployment
+- Rolling updates with zero downtime
+- Environment-specific configurations (dev/staging/prod)
+- Rollback capability within 5 minutes
+- Deployment status notifications
+
+**Category:** Deployability
+
+---
+
+### Maintainability
+
+#### NFR-M1: Comprehensive Documentation
+**Description:** The system shall include complete technical and user documentation.
+
+**Acceptance Criteria:**
+- API documentation with OpenAPI/Swagger
+- Database schema documentation
+- Deployment guide with troubleshooting
+- User manuals for each stakeholder role
+- Code comments for complex logic
+
+**Category:** Maintainability
+
+---
+
+#### NFR-M2: Modular Architecture
+**Description:** The system shall use a modular architecture allowing independent updates.
+
+**Acceptance Criteria:**
+- Loose coupling between modules (booking, billing, housekeeping)
+- Versioned APIs for external integrations
+- Plugin capability for future extensions
+- Module replacement without full system downtime
+- Clear interface contracts between modules
+
+**Category:** Maintainability
+
+---
+
+#### NFR-M3: Error Logging and Monitoring
+**Description:** The system shall provide comprehensive error logging and monitoring.
+
+**Acceptance Criteria:**
+- Centralized log aggregation
+- Error categorization by severity
+- Real-time alerting for critical errors
+- Log retention for minimum 90 days
+- Searchable log interface for troubleshooting
+
+**Category:** Maintainability
+
+---
+
+### Scalability
+
+#### NFR-S1: Concurrent User Support
+**Description:** The system shall support 500 concurrent users during peak hours.
+
+**Acceptance Criteria:**
+- Response time degradation < 20% at peak load
+- Database connection pooling implemented
+- Load balancing support for horizontal scaling
+- Stress test results documented
+- Performance monitoring during peak times
+
+**Category:** Scalability
+
+---
+
+#### NFR-S2: Horizontal Scaling Capability
+**Description:** The system shall scale horizontally by adding more servers.
+
+**Acceptance Criteria:**
+- Stateless application design
+- Shared session management across instances
+- Database replication support
+- Auto-scaling configuration possible
+- No single point of failure
+
+**Category:** Scalability
+
+---
+
+#### NFR-S3: Peak Season Handling
+**Description:** The system shall handle 3x normal traffic during holiday seasons.
+
+**Acceptance Criteria:**
+- Auto-scaling triggers at 70% capacity
+- Queue management for non-critical tasks
+- Graceful degradation of non-essential features
+- Capacity planning documentation
+- Load testing completed before peak seasons
+
+**Category:** Scalability
+
+---
+
+### Security
+
+#### NFR-SE1: Data Encryption
+**Description:** All sensitive data shall be encrypted at rest and in transit.
+
+**Acceptance Criteria:**
+- TLS 1.3 for data in transit
+- AES-256 encryption for stored sensitive data
+- Encrypted backups
+- PCI-DSS compliance for payment data
+- Encryption keys stored separately from data
+
+**Category:** Security
+
+---
+
+#### NFR-SE2: Authentication and Authorization
+**Description:** The system shall implement secure authentication and role-based access control.
+
+**Acceptance Criteria:**
+- Multi-factor authentication option for staff
+- Password policy enforcement (minimum 12 chars, complexity)
+- Session timeout after 15 minutes inactivity
+- Failed login attempt lockout after 5 attempts
+- Password reset with secure verification
+
+**Category:** Security
+
+---
+
+#### NFR-SE3: Audit Trail
+**Description:** All critical actions shall be logged with user identity and timestamp.
+
+**Acceptance Criteria:**
+- Immutable audit logs
+- Logs include: who, what, when, from where
+- Tamper-evident logging mechanism
+- Audit log retention: 7 years
+- Regular audit log review process
+
+**Category:** Security
+
+---
+
+#### NFR-SE4: GDPR Compliance
+**Description:** The system shall support data privacy regulations including GDPR.
+
+**Acceptance Criteria:**
+- User consent management for data collection
+- Right to be forgotten (data deletion) workflow
+- Data export capability for users
+- Privacy policy acceptance tracking
+- Data processing records maintained
+
+**Category:** Security
+
+---
+
+### Performance
+
+#### NFR-P1: Page Load Time
+**Description:** Critical pages shall load within 2 seconds under normal conditions.
+
+**Acceptance Criteria:**
+- Home page: < 2 seconds
+- Search results: < 2 seconds
+- Booking confirmation: < 3 seconds
+- Measured on standard broadband connection
+- Performance budget enforced in CI/CD
+
+**Category:** Performance
+
+---
+
+#### NFR-P2: Database Query Performance
+**Description:** Database queries shall execute within defined thresholds.
+
+**Acceptance Criteria:**
+- Simple queries: < 100ms
+- Complex search: < 500ms
+- Reporting queries: < 3 seconds
+- Indexes on all foreign keys and frequent search fields
+- Query optimization reviewed quarterly
+
+**Category:** Performance
+
+---
+
+#### NFR-P3: API Response Time
+**Description:** API endpoints shall respond within defined timeframes.
+
+**Acceptance Criteria:**
+- 95% of requests: < 300ms
+- 99% of requests: < 500ms
+- Rate limiting to prevent abuse
+- Response caching for frequent queries
+- API performance monitored continuously
+
+**Category:** Performance
+
+---
+
+#### NFR-P4: Availability Uptime
+**Description:** The system shall maintain high availability for critical services.
+
+**Acceptance Criteria:**
+- Core booking engine: 99.9% uptime
+- Planned maintenance windows: < 4 hours/month
+- Monitoring with 5-minute check intervals
+- Incident response: < 1 hour for critical issues
+- SLA documentation for stakeholders
+
+**Category:** Performance
+
+---
+
+## Non-Functional Requirements Summary
+
+| Category | Requirements | Met |
+|----------|--------------|-----|
+| Usability | 3 | ✓ |
+| Deployability | 3 | ✓ |
+| Maintainability | 3 | ✓ |
+| Scalability | 3 | ✓ |
+| Security | 4 | ✓ |
+| Performance | 4 | ✓ |
+| **Total** | **20** | **All Categories Covered** |
+
+---
+
+## Combined Requirements Overview
+
+| Requirement Type | Count |
+|-----------------|-------|
+| Functional Requirements | 12 |
+| Non-Functional Requirements | 20 |
+| **Total Requirements** | **32** |
+
+All requirements include clear acceptance criteria and traceability to stakeholder concerns.
