@@ -1,9 +1,5 @@
 # Stakeholder Analysis: Hospitality Management System
 
-**Author:** Your Full Name
-**Date:** March 18, 2026
-**Course:** Software Engineering
-**Assignment:** 4 - Stakeholder and System Requirements Documentation
 
 ## Overview
 
