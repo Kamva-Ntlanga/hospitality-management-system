@@ -22,6 +22,11 @@ The Hospitality Management System digitizes and automates core hotel operations,
 - [Non-Functional Requirements](./NON-FUNCTIONAL-REQUIREMENTS.md) - 17 requirements across usability, security, scalability, and more
 - [Reflection](./REFLECTION.md) - Challenges and trade-offs in requirements engineering
 
+## Assignment 5: Use Case Modeling and Test Case Development
+- [Use Case Diagram](USECASE_DIAGRAM.md)
+- [Use Case Specifications](USECASE_SPECIFICATIONS.md)
+- [Test Cases](TEST_CASES.md)
+- [Assignment 5 Reflection](REFLECTION_ASSIGNMENT5.md)
 ---
 
 ##  Key Features
