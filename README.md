@@ -26,7 +26,7 @@ The Hospitality Management System digitizes and automates core hotel operations,
 - [Use Case Diagram](USECASE_DIAGRAM.md)
 - [Use Case Specifications](USECASE_SPECIFICATIONS.md)
 - [Test Cases](TEST_CASES.md)
-- [Assignment 5 Reflection](REFLECTION_ASSIGNMENT5.md)
+- [Assignment 5 Reflection](REFLECTION_ASSIGNMENT5_.md)
 ---
 
 ##  Key Features
