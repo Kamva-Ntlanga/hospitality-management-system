@@ -170,4 +170,4 @@ The most valuable lesson was that thinking about testing during requirements lea
 
 ---
 
-**Word Count: Approximately 1,050 words**
+
