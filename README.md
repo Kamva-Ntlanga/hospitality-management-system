@@ -29,6 +29,16 @@ The Hospitality Management System digitizes and automates core hotel operations,
 - [Assignment 5 Reflection](REFLECTION_ASSIGNMENT5_.md)
 ---
 
+## Assignment 6: Agile User Stories, Backlog, and Sprint Planning
+- [Agile Planning Document](ASSIGNMENT6_AGILE.md)
+- [Assignment 6 Reflection](REFLECTION_ASSIGNMENT6.md)
+
+### GitHub Agile Tools Used
+- **Issues:** 16 user stories created
+- **Labels:** user-story, must-have, should-have, could-have, wont-have, priority levels
+- **Milestones:** Sprint 1, Sprint 2, Sprint 3
+- **Project Board:** HotelHub Agile Sprint Board (Kanban)
+
 ##  Key Features
 
 - **Room Management**: Track inventory, room types, rates, and availability
