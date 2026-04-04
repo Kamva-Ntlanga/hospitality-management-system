@@ -69,7 +69,7 @@ These align with stakeholder success metrics from Assignment 4.
 
 ### Sprint Goal
 
-**"Implement core booking functionality allowing guests to search for rooms, make reservations, complete payments, and enabling front desk staff to process walk-in check-ins with a basic management dashboard."**
+**Implement core booking functionality allowing guests to search for rooms, make reservations, complete payments, and enabling front desk staff to process walk-in check-ins with a basic management dashboard.**
 
 ### Sprint Duration: 2 Weeks (10 Working Days)
 
