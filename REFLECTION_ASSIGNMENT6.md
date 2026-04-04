@@ -38,4 +38,4 @@ US-011 (OTA integration with Booking.com) is valuable for the Marketing Team but
 
 This assignment showed that Agile planning requires objective prioritization, realistic estimation, and clear goal definition. The frameworks of MoSCoW prioritization, story points, and sprint goals provide structure, but discipline and objectivity are what make them work. These skills will translate directly to real-world Agile teams.
 
-**Word Count: ~520 words**
+
