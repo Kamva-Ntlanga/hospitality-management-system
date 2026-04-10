@@ -24,6 +24,6 @@ This assignment taught me that a Kanban board is not just a visual aid. When set
 
 The most important lesson was that customising columns to match your actual workflow is essential. Generic columns are a start, but adding "Testing" and "Blocked" makes the board more useful for identifying bottlenecks.
 
-I also learned how to enable and test GitHub's built-in automation workflows Item added to project, Item closed, Pull request merged). These automations keep the board accurate without manual effort, which is a huge time-saver in Agile development.
+I also learned how to enable and test GitHub's built-in automation workflows Item added to project, Item closed, Pull request merged. These automations keep the board accurate without manual effort, which is a huge time-saver in Agile development.
 
 
