@@ -33,6 +33,14 @@ The Hospitality Management System digitizes and automates core hotel operations,
 - [Agile Planning Document](ASSIGNMENT6_AGILE.md)
 - [Assignment 6 Reflection](REFLECTION_ASSIGNMENT6.md)
 
+  ## Assignment 7: GitHub Project Templates and Kanban Board Implementation
+- [Template Analysis and Justification](template_analysis.md)
+- [Kanban Board Explanation](kanban_explanation.md)
+- [Assignment 7 Reflection](REFLECTION_ASSIGNMENT7.md)
+- [Kanban Board Screenshot](kanban-board.png.png)
+- [Workflows Screenshot](workflows-enabled.png.png)
+- [Issues + Labels](issues.png)
+
 ### GitHub Agile Tools Used
 - **Issues:** 16 user stories created
 - **Labels:** user-story, must-have, should-have, could-have, wont-have, priority levels
