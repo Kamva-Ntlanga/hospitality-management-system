@@ -61,10 +61,8 @@ I tested all three workflows to confirm they work correctly:
 | **Pull request merged** | Created a PR with "Closes #X" and merged it | Linked issue closes and moves to "Done" | Issue closed and appeared in "Done" | ✅ Pass |
 
 **Evidence Screenshots:**
-- Main board with all columns and labels: `<img width="1920" height="789" alt="kanban-board png" src="https://github.com/user-attachments/assets/66125775-4b71-40ce-8050-faea1ce98723" />
-`
-- <img width="1920" height="962" alt="workflows-enabled png" src="https://github.com/user-attachments/assets/9a2f6a9e-5190-4777-84b2-46491ae3c44b" />
-`
+- Main board with all columns and labels: 
+- Workflows page showing enabled rules: 
 
 ## Screenshot of My Kanban Board
 
