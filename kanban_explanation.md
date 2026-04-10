@@ -61,7 +61,7 @@ I tested all three workflows to confirm they work correctly:
 | **Pull request merged** | Created a PR with "Closes #X" and merged it | Linked issue closes and moves to "Done" | Issue closed and appeared in "Done" | ✅ Pass |
 
 **Evidence Screenshots:**
-- Main board with all columns and labels: [kanban-board.png](./images/screenshot.png) 
+- Main board with all columns and labels: ![HotelHub Kanban Board](kanban-board.png)
 - Workflows page showing enabled rules: [workflows-enabled.png](images/screenshot.png)
 - Issues + labels: ![issues.png](images/screenshot.png)
 
