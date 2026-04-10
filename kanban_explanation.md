@@ -1,3 +1,5 @@
+<img width="1920" height="962" alt="workflows-enabled png" src="https://github.com/user-attachments/assets/9a2f6a9e-5190-4777-84b2-46491ae3c44b" />
+<img width="1920" height="789" alt="kanban-board png" src="https://github.com/user-attachments/assets/66125775-4b71-40ce-8050-faea1ce98723" />
 # Assignment 7: Kanban Board Explanation
 
 ## What is a Kanban Board?
