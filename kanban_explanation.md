@@ -62,15 +62,15 @@ I tested all three workflows to confirm they work correctly:
 
 **Evidence Screenshots:**
 - Main board with all columns and labels: ![HotelHub Kanban Board](kanban-board.png.png)
-- 
-- Workflows page showing enabled rules: ![Workflows Page](workflows-enabled.png.png)
-- 
-- Issues + labels: ![Issues + labels](issues.png)
 
-## Screenshot of My Kanban Board
-(attached above)
+  ## Screenshot of My Kanban Board
 
 The screenshot above shows my complete HotelHub Development Kanban board with all 16 user stories (plus 1 test) from Assignment 6 loaded into the "To do" column. Each issue has labels (must-have, should-have, etc.) and is assigned to me as the developer. The "Testing" and "Blocked" columns are custom additions that support quality assurance and issue tracking.
+
+- Workflows page showing enabled rules: ![Workflows Page](workflows-enabled.png.png)
+  
+- Issues + labels: ![Issues + labels](issues.png)
+
 
 ## Conclusion
 
