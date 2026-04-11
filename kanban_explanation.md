@@ -2,7 +2,7 @@
 
 ## What is a Kanban Board?
 
-In my own words, **a Kanban board is a visual project management tool that helps teams see the flow of their work at a glance. It uses cards to represent tasks and columns to show each task's stage in a process, from "Not Started" to "Completed".**
+Kanban board is a visual project management tool that helps teams see the flow of their work at a glance. It uses cards to represent tasks and columns to show each task's stage in a process, from "Not Started" to "Completed".**
 
 ## How My HotelHub Kanban Board Visualizes Workflow
 
