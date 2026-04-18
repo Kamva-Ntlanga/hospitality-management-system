@@ -85,7 +85,7 @@ User Story: US-015
 
 ## 4. Payment State Diagram
 
-``mermaid
+```mermaid
 stateDiagram-v2
     [*] --> Pending
     Pending --> Authorized: Payment gateway approves
@@ -106,6 +106,40 @@ Traceability:
 FR-7 (Integrated Billing) – full payment lifecycle
 
 User Stories: US-003, US-013
+
+## 5. Housekeeping Task State Diagram
+
+```mermaid
+stateDiagram-v2
+    [*] --> Assigned
+    Assigned --> InProgress: Staff starts cleaning
+    InProgress --> Completed: Cleaning done
+    InProgress --> IssueReported: Maintenance needed
+    IssueReported --> MaintenanceRequest: Create maintenance ticket
+    Completed --> Inspected: Supervisor reviews
+    Inspected --> [*]
+```
+
+Explanation:
+When a guest checks out, the system creates a housekeeping task in the Assigned state. A housekeeper picks up the task and starts working, moving it to InProgress. If the cleaning is completed without issues, it becomes Completed. However, if the housekeeper finds a problem (e.g., broken lamp, leaking tap), they move the task to IssueReported. This automatically creates a separate maintenance request.
+
+After a task is Completed, a supervisor must Inspect the room to ensure quality standards. Only after inspection does the task end. This ensures that no room is marked clean without proper verification.
+
+Traceability:
+
+FR-3 (Housekeeping Task Management)
+
+User Story: US-006
+
+
+
+
+
+
+
+
+
+
 
 
 
