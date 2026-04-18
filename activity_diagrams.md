@@ -197,7 +197,7 @@ flowchart TD
     start([Start]) --> staffLogin[Housekeeping logs in]
     staffLogin --> selectRoom[Select room number]
     selectRoom --> describe[Describe issue]
-    describe --> attachPhoto["Attach photo (optional)"]
+    describe --> attachPhoto["Attach photo - optional"]
     attachPhoto --> submit[Submit request]
     submit --> createRequest[System creates maintenance request]
     createRequest --> assignPriority[Assign priority]
