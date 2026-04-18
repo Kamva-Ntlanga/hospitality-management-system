@@ -30,6 +30,8 @@ FR-2 (Online Check-in/out) – uses Booked → Occupied → Available
 FR-9 (Maintenance Request) – uses Occupied → Maintenance → Available
 User Stories: US-001, US-004, US-010
 
+## 1. Booking State Diagram
+   
 ```mermaid
 stateDiagram-v2
     [*] --> Pending
