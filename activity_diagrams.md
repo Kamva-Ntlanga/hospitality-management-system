@@ -141,6 +141,111 @@ Swimlanes: Guest (checkout); System (auto-create, update, notify); Housekeeping 
 
 Traceability: FR-3; User Story US-006
 
+## 6. Generate Occupancy Report Activity Diagram
+```mermaid
+flowchart TD
+    start([Start]) --> login[Manager logs in]
+    login --> navigate[Navigate to reports]
+    navigate --> selectType[Select Occupancy Report]
+    selectType --> chooseDate[Choose date range]
+    chooseDate --> generate[Generate report]
+    generate --> query[Query booking data]
+    query --> calculate[Calculate occupancy %]
+    calculate --> format[Format as PDF/Excel]
+    format --> display[Display download link]
+    display --> end1([End])
+```
+Explanation:
+The manager logs in and navigates to reports. They select "Occupancy Report" and choose a date range. The system queries booking data, calculates the occupancy percentage, formats the report as PDF/Excel, and displays a download link.
+
+Swimlanes: Manager (login, navigate, select, choose); System (generate, query, calculate, format, display)
+
+Traceability: FR-10; User Stories US-008, US-009
+
+## 7. Process Walk-in Check-in Activity Diagram
+```mermaid
+flowchart TD
+    start([Start]) --> guestArrives[Guest arrives at desk]
+    guestArrives --> staffSearch[Staff searches available rooms]
+    staffSearch --> showRooms[Display available rooms]
+    showRooms --> selectRoom[Staff selects room]
+    selectRoom --> createBooking[Create walk-in booking]
+    createBooking --> collectInfo[Collect guest details]
+    collectInfo --> processPayment[Process payment]
+    processPayment --> success{Payment OK?}
+    success -- No --> retry[Ask for another method]
+    retry --> processPayment
+    success -- Yes --> generateKey[Generate room key]
+    generateKey --> handKey[Hand key to guest]
+    handKey --> end1([End])
+```
+
+Explanation:
+A guest arrives at the front desk without a reservation. Staff searches for available rooms and displays options. After the guest selects a room, staff creates a walk-in booking, collects guest details, and processes payment. If payment fails, they ask for another method. If successful, they generate a room key and hand it to the guest.
+
+Swimlanes: Guest (arrives, pays); Staff (search, select, create, collect, generate, hand key); System (display, process, generate)
+
+Traceability: FR-1, FR-7; User Story US-007
+
+## 8. Report Maintenance Issue Activity Diagram
+```mermaid
+flowchart TD
+    start([Start]) --> staffLogin[Housekeeping logs in]
+    staffLogin --> selectRoom[Select room number]
+    selectRoom --> describe[Describe issue]
+    describe --> attachPhoto[Attach photo (optional)]
+    attachPhoto --> submit[Submit request]
+    submit --> createRequest[System creates maintenance request]
+    createRequest --> assignPriority[Assign priority]
+    assignPriority --> notifyTech[Notify technician]
+    notifyTech --> techStart[Technician starts work]
+    techStart --> resolve[Issue resolved]
+    resolve --> updateStatus[Update room status]
+    updateStatus --> end1([End])
+```
+Explanation:
+Housekeeping logs into the mobile app, selects the room number, describes the issue, and optionally attaches a photo. After submitting, the system creates a maintenance request, assigns a priority (e.g., High/Low), and notifies a technician. The technician starts work, resolves the issue, and updates the room status.
+
+Swimlanes: Housekeeping (login, select, describe, attach, submit); System (create, assign, notify); Technician (start, resolve, update)
+
+Traceability: FR-9; User Story US-010
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
