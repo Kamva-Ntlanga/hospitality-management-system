@@ -1,6 +1,3 @@
-
-
-```markdown
 # Assignment 8: Activity Diagrams – Workflow Modeling
 
 ## Overview
@@ -26,3 +23,4 @@ flowchart TD
     sendEmail --> end1([End])
     success -- No --> fail[Show payment failed]
     fail --> payment
+```
