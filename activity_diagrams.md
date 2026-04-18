@@ -202,7 +202,7 @@ flowchart TD
     notifyTech --> techStart[Technician starts work]
     techStart --> resolve[Issue resolved]
     resolve --> closeRequest[Close request]
-    closeRequest --> end([End])
+    closeRequest --> finish([End])
 ```
 Explanation:
 Housekeeping logs into the mobile app, selects the room number, describes the issue, and optionally attaches a photo. After submitting, the system creates a maintenance request, assigns a priority (e.g., High/Low), and notifies a technician. The technician starts work, resolves the issue, and updates the room status.
