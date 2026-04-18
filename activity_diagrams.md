@@ -190,11 +190,14 @@ Traceability: FR-1, FR-7; User Story US-007
 ## 8. Report Maintenance Issue Activity Diagram
 ```mermaid
 
+## 8. Report Maintenance Issue Activity Diagram
+
+```mermaid
 flowchart TD
     start([Start]) --> staffLogin[Housekeeping logs in]
     staffLogin --> selectRoom[Select room number]
     selectRoom --> describe[Describe issue]
-    describe --> attachPhoto[Attach photo (optional)]
+    describe --> attachPhoto["Attach photo (optional)"]
     attachPhoto --> submit[Submit request]
     submit --> createRequest[System creates maintenance request]
     createRequest --> assignPriority[Assign priority]
