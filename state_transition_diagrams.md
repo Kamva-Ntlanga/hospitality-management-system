@@ -132,6 +132,88 @@ FR-3 (Housekeeping Task Management)
 
 User Story: US-006
 
+## 6. ServiceRequest State Diagram
+
+```mermaid
+stateDiagram-v2
+    [*] --> Submitted
+    Submitted --> Acknowledged: Staff receives
+    Acknowledged --> InProgress: Staff starts
+    InProgress --> Completed: Service delivered
+    InProgress --> Escalated: Requires manager
+    Completed --> [*]
+```
+
+Explanation:
+A guest submits a service request (e.g., extra towels, room service). The request is Submitted. A staff member (front desk or housekeeping) acknowledges it, moving to Acknowledged. When work begins, it becomes InProgress.
+
+If the request is routine, it goes to Completed once delivered. However, if the staff cannot resolve the issue (e.g., guest complaint, technical problem), they can Escalate it to a manager. The manager then handles it. This ensures that complex issues get proper attention.
+
+Traceability:
+
+FR-4 (Guest Service Requests)
+
+User Story: US-005
+
+## 7. StaffAccount State Diagram
+
+```
+stateDiagram-v2
+    [*] --> Active
+    Active --> Suspended: Failed login 5 times
+    Active --> Deactivated: Admin disables
+    Suspended --> Active: Admin resets
+    Deactivated --> [*]
+```
+
+Explanation:
+A staff account is Active when created. If the user enters the wrong password 5 times, the account becomes Suspended – a security measure to prevent brute-force attacks. An IT administrator must manually reset the account to reactivate it.
+
+If an employee leaves the hotel or changes roles, an administrator can Deactivate the account permanently. Deactivated accounts cannot be reactivated; a new account must be created. This ensures that only current staff have access, supporting security compliance.
+
+Traceability:
+
+FR-6 (Role-Based Access Control)
+
+User Story: US-012
+
+## 8. MaintenanceRequest State Diagram
+
+```mermaid
+stateDiagram-v2
+    [*] --> Reported
+    Reported --> Assigned: Staff assigned
+    Assigned --> InProgress: Technician starts
+    InProgress --> Completed: Repair done
+    Completed --> Verified: Supervisor checks
+    Verified --> [*]
+    InProgress --> OnHold: Parts needed
+    OnHold --> InProgress: Parts received
+```
+
+Explanation:
+When an issue is reported (by guest, housekeeper, or front desk), a maintenance request is Reported. A manager or dispatcher assigns it to a technician, moving it to Assigned. When the technician begins work, it becomes InProgress.
+
+If the repair requires parts that are not in stock, the request goes OnHold until the parts arrive. Once received, it resumes InProgress. After the repair is done, the request becomes Completed. A supervisor then Verifies the repair to ensure quality. This lifecycle ensures that no maintenance issue is forgotten and that all repairs are quality-checked.
+
+Traceability:
+
+FR-9 (Maintenance Request and Tracking)
+
+User Story: US-010
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
