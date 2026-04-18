@@ -17,3 +17,11 @@ stateDiagram-v2
     Occupied --> Maintenance: Issue reported
     Maintenance --> Available: Repair completed
     Available --> Maintenance: Preventive maintenance
+
+Explanation:
+
+Key states: Available, Booked, Occupied, Maintenance
+
+Transitions: Triggered by events: book, cancel, check-in, check-out, report issue, complete repair.
+
+FR mapping: FR-1 (Room Booking and Search) – “Booked” state ensures room is reserved. FR-2 (Online Check-in/out) – moves from Booked → Occupied → Available. FR-9 (Maintenance Request) – moves to Maintenance state.
