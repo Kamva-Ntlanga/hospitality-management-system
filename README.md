@@ -41,6 +41,12 @@ The Hospitality Management System digitizes and automates core hotel operations,
 - [Workflows Screenshot](workflows-enabled.png.png)
 - [Issues + Labels](issues.png)
 
+## Assignment 8: Object State and Activity Workflow Modeling
+- [State Transition Diagrams](state_transition_diagrams.md)
+- [Activity Diagrams](activity_diagrams.md)
+- [Reflection](REFLECTION_ASSIGNMENT8.md)
+
+  
 ### GitHub Agile Tools Used
 - **Issues:** 16 user stories created
 - **Labels:** user-story, must-have, should-have, could-have, wont-have, priority levels
