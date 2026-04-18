@@ -17,6 +17,7 @@ stateDiagram-v2
     Occupied --> Maintenance: Issue reported
     Maintenance --> Available: Repair completed
     Available --> Maintenance: Preventive maintenance
+```
 
 Explanation:
 
