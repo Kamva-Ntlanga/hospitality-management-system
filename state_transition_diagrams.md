@@ -26,8 +26,11 @@ If a guest or housekeeper reports an issue (e.g., broken AC), the room moves to 
 
 Traceability:
 FR-1 (Room Booking and Search) – uses Available and Booked states
+
 FR-2 (Online Check-in/out) – uses Booked → Occupied → Available
+
 FR-9 (Maintenance Request) – uses Occupied → Maintenance → Available
+
 User Stories: US-001, US-004, US-010
 
 ## 1. Booking State Diagram
@@ -51,6 +54,9 @@ Once the booking is confirmed, the guest can check in, moving the booking to Che
 Traceability:
 
 FR-1 (Room Booking) – Pending and Confirmed
+
 FR-2 (Check-in) – Confirmed → CheckedIn
+
 FR-7 (Payments) – Pending → Confirmed only after payment success
+
 User Stories: US-002, US-003, US-004
