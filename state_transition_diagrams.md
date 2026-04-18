@@ -60,3 +60,68 @@ FR-2 (Check-in) – Confirmed → CheckedIn
 FR-7 (Payments) – Pending → Confirmed only after payment success
 
 User Stories: US-002, US-003, US-004
+
+## 3. Guest State Diagram
+
+```mermaid
+stateDiagram-v2
+    [*] --> Registered
+    Registered --> Active: First booking
+    Active --> Loyal: 5+ stays
+    Active --> Inactive: No activity for 12 months
+    Loyal --> Inactive: No activity for 24 months
+    Inactive --> Active: New booking
+```
+Explanation:
+A guest becomes Registered when they create a profile. After they complete their first booking, they become Active – a regular guest. If they accumulate 5 or more stays, they reach Loyal status, which can unlock special promotions (e.g., free room upgrade, late check-out).
+
+If an Active guest has no bookings for 12 months, they move to Inactive. Loyal guests have a longer grace period: 24 months of inactivity before becoming Inactive. An Inactive guest can become Active again simply by making a new booking. This lifecycle helps the Marketing Team target promotions based on guest loyalty.
+
+Traceability:
+
+FR-11 (Guest Profile Management) – tracks loyalty status
+
+User Story: US-015
+
+## 4. Payment State Diagram
+
+``mermaid
+stateDiagram-v2
+    [*] --> Pending
+    Pending --> Authorized: Payment gateway approves
+    Pending --> Failed: Decline or error
+    Authorized --> Captured: Funds settled
+    Authorized --> Refunded: User cancels after payment
+    Captured --> [*]
+    Failed --> [*]
+    ```
+
+Explanation:
+When a guest initiates a payment, the transaction is Pending. The system sends the card details to the payment gateway. If the gateway approves the transaction (card valid, funds available), the payment moves to Authorized – the funds are reserved but not yet taken. If the gateway declines or there is an error, the payment goes to Failed and the lifecycle ends.
+
+From Authorized, the system can either Capture the funds (move to Captured – money taken) or Refund the guest (if they cancel before the booking is finalized). Once captured, the payment is complete. This lifecycle ensures the Finance Department has a clear audit trail for every transaction.
+
+Traceability:
+
+FR-7 (Integrated Billing) – full payment lifecycle
+
+User Stories: US-003, US-013
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
