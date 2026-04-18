@@ -20,9 +20,6 @@ stateDiagram-v2
 ```
 
 Explanation:
+A hotel room starts in the Available state. When a guest makes a booking, the room becomes Booked – it is reserved but not yet occupied. If the guest cancels, the room returns to Available. When the guest checks in, the room moves to Occupied. After check-out, it becomes Available again.
 
-Key states: Available, Booked, Occupied, Maintenance
-
-Transitions: Triggered by events: book, cancel, check-in, check-out, report issue, complete repair.
-
-FR mapping: FR-1 (Room Booking and Search) – “Booked” state ensures room is reserved. FR-2 (Online Check-in/out) – moves from Booked → Occupied → Available. FR-9 (Maintenance Request) – moves to Maintenance state.
+If a guest or housekeeper reports an issue (e.g., broken AC), the room moves to Maintenance. It stays there until repairs are completed, then returns to Available. Additionally, the hotel manager can place a room into Maintenance for preventive work (e.g., deep cleaning, painting). This ensures that unavailable rooms are not accidentally booked.
