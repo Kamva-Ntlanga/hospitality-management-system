@@ -28,4 +28,4 @@ State diagrams and activity diagrams serve different purposes in system modeling
 
 Modeling dynamic behavior revealed gaps in earlier requirements. For example, the HousekeepingTask state diagram exposed the need for an "Inspected" state after completion – a requirement not explicitly stated in Assignment 4 but critical for quality assurance.
 
-**Word count: ~500 words**
+
