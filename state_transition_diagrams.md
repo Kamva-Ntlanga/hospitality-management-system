@@ -33,7 +33,7 @@ FR-9 (Maintenance Request) – uses Occupied → Maintenance → Available
 
 User Stories: US-001, US-004, US-010
 
-## 1. Booking State Diagram
+## 2. Booking State Diagram
    
 ```mermaid
 stateDiagram-v2
@@ -86,6 +86,7 @@ User Story: US-015
 ## 4. Payment State Diagram
 
 ```mermaid
+
 stateDiagram-v2
     [*] --> Pending
     Pending --> Authorized: Payment gateway approves
@@ -97,6 +98,7 @@ stateDiagram-v2
     ```
 
 Explanation:
+
 When a guest initiates a payment, the transaction is Pending. The system sends the card details to the payment gateway. If the gateway approves the transaction (card valid, funds available), the payment moves to Authorized – the funds are reserved but not yet taken. If the gateway declines or there is an error, the payment goes to Failed and the lifecycle ends.
 
 From Authorized, the system can either Capture the funds (move to Captured – money taken) or Refund the guest (if they cancel before the booking is finalized). Once captured, the payment is complete. This lifecycle ensures the Finance Department has a clear audit trail for every transaction.
