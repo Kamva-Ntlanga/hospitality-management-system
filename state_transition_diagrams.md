@@ -42,3 +42,14 @@ stateDiagram-v2
     CheckedIn --> Completed: Guest checks out
     Completed --> [*]
 ```
+
+Explanation:
+When a guest creates a booking, it starts as Pending. At this stage, the room is temporarily held, but the booking is not final. If the guest completes payment successfully, the booking becomes Confirmed – the room is now locked for the guest. If the guest cancels before paying, the booking goes to Cancelled and the room is released.
+
+Once the booking is confirmed, the guest can check in, moving the booking to CheckedIn. After the guest checks out, the booking becomes Completed and the lifecycle ends. If the guest cancels after confirmation (but before check-in), the booking also becomes Cancelled, and a refund process may be triggered (handled by the Payment object).
+
+Traceability:
+FR-1 (Room Booking) – Pending and Confirmed
+FR-2 (Check-in) – Confirmed → CheckedIn
+FR-7 (Payments) – Pending → Confirmed only after payment success
+User Stories: US-002, US-003, US-004
