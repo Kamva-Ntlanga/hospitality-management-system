@@ -12,11 +12,20 @@ Each state and activity diagram traces directly to user stories from Assignment 
 
 ## Comparing State Diagrams vs. Activity Diagrams
 
-State diagrams focus on the lifecycle of a single object – its possible statuses and the events that cause changes. They answer: "What can happen to this object?" Activity diagrams focus on a process flow – sequences of actions, decisions, and parallel tasks across multiple objects and actors. They answer: "How do we accomplish a goal?"
+State diagrams and activity diagrams serve different purposes in system modeling:
 
-For HotelHub, state diagrams were essential for objects like Booking and Payment that have complex status rules. Activity diagrams were essential for workflows like Check-in that involve guest, system, and staff interactions.
+| Aspect | State Diagram | Activity Diagram |
+|--------|---------------|------------------|
+| **Focus** | Lifecycle of a single object | Flow of a process or workflow |
+| **Question answered** | "What states can an object be in and how does it change?" | "What steps are needed to complete a task?" |
+| **Key elements** | States (rounded rectangles), transitions (arrows), events | Actions, decisions (diamonds), start/end nodes, swimlanes |
+| **Example from HotelHub** | Room: Available → Booked → Occupied → Available | Book Room: Search → Select → Enter details → Validate → Pay → Confirm |
+| **Use case** | Understanding how a booking or payment status changes over time | Documenting step-by-step user interactions |
+
+**Why both are needed:** State diagrams ensure we don't miss object lifecycles (e.g., a payment must go from Pending → Authorized → Captured). Activity diagrams ensure we capture the correct sequence of user actions and system responses. Together, they provide a complete dynamic model of the system.
 
 ## Lessons Learned
 
 Modeling dynamic behavior revealed gaps in earlier requirements. For example, the HousekeepingTask state diagram exposed the need for an "Inspected" state after completion – a requirement not explicitly stated in Assignment 4 but critical for quality assurance.
 
+**Word count: ~500 words**
