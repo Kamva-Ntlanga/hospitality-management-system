@@ -29,7 +29,8 @@ FR-1 (Room Booking and Search) – uses Available and Booked states
 FR-2 (Online Check-in/out) – uses Booked → Occupied → Available
 FR-9 (Maintenance Request) – uses Occupied → Maintenance → Available
 User Stories: US-001, US-004, US-010
-```
+
+```mermaid
 stateDiagram-v2
     [*] --> Pending
     Pending --> Confirmed: Payment successful
