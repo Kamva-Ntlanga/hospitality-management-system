@@ -108,6 +108,7 @@ Traceability:
 FR-7 (Integrated Billing) – full payment lifecycle
 
 User Stories: US-003, US-013
+```
 
 ## 5. Housekeeping Task State Diagram
 
