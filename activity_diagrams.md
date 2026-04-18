@@ -189,6 +189,7 @@ Traceability: FR-1, FR-7; User Story US-007
 
 ## 8. Report Maintenance Issue Activity Diagram
 ```mermaid
+
 flowchart TD
     start([Start]) --> staffLogin[Housekeeping logs in]
     staffLogin --> selectRoom[Select room number]
