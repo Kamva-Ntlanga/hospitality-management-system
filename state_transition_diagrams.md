@@ -95,10 +95,9 @@ stateDiagram-v2
     Authorized --> Refunded: User cancels after payment
     Captured --> [*]
     Failed --> [*]
-    ```
+```
 
 Explanation:
-
 When a guest initiates a payment, the transaction is Pending. The system sends the card details to the payment gateway. If the gateway approves the transaction (card valid, funds available), the payment moves to Authorized – the funds are reserved but not yet taken. If the gateway declines or there is an error, the payment goes to Failed and the lifecycle ends.
 
 From Authorized, the system can either Capture the funds (move to Captured – money taken) or Refund the guest (if they cancel before the booking is finalized). Once captured, the payment is complete. This lifecycle ensures the Finance Department has a clear audit trail for every transaction.
@@ -108,7 +107,6 @@ Traceability:
 FR-7 (Integrated Billing) – full payment lifecycle
 
 User Stories: US-003, US-013
-```
 
 ## 5. Housekeeping Task State Diagram
 
