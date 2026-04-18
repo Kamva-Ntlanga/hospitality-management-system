@@ -197,15 +197,15 @@ flowchart TD
     start([Start]) --> staffLogin[Housekeeping logs in]
     staffLogin --> selectRoom[Select room number]
     selectRoom --> describe[Describe issue]
-    describe --> attachPhoto["Attach photo - optional"]
+    describe --> attachPhoto[Attach photo - optional]
     attachPhoto --> submit[Submit request]
     submit --> createRequest[System creates maintenance request]
     createRequest --> assignPriority[Assign priority]
     assignPriority --> notifyTech[Notify technician]
     notifyTech --> techStart[Technician starts work]
     techStart --> resolve[Issue resolved]
-    resolve --> updateStatus[Update room status]
-    updateStatus --> end1([End])
+    resolve --> closeRequest[Close request]
+    closeRequest --> end([End])
 ```
 Explanation:
 Housekeeping logs into the mobile app, selects the room number, describes the issue, and optionally attaches a photo. After submitting, the system creates a maintenance request, assigns a priority (e.g., High/Low), and notifies a technician. The technician starts work, resolves the issue, and updates the room status.
