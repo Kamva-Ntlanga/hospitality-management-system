@@ -19,7 +19,7 @@ The class diagram directly traces to:
 
 ## Trade-offs Made
 
-1. **Inheritance vs. Composition**: I chose not to create a superclass `Person` for Guest and StaffAccount because they have very different attributes.
+1. **Inheritance vs. Composition**: I chose not to create a superclass *Person* for Guest and StaffAccount because they have very different attributes.
 2. **Bidirectional vs. Unidirectional Associations**: I kept bidirectional where both sides need navigation.
 3. **Data Types**: Used simple types instead of enums because Mermaid.js does not support enums directly.
 4. **Method Signatures**: Omitted some parameters to keep diagram readable.
