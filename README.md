@@ -46,6 +46,10 @@ The Hospitality Management System digitizes and automates core hotel operations,
 - [Activity Diagrams](activity_diagrams.md)
 - [Reflection](REFLECTION_ASSIGNMENT8.md)
 
+## Assignment 9: Domain Model and Class Diagram
+- [Domain Model Documentation](domain_model.md)
+- [Class Diagram](class_diagram.md)
+- [Reflection](REFLECTION_ASSIGNMENT9.md)
   
 ### GitHub Agile Tools Used
 - **Issues:** 16 user stories created
