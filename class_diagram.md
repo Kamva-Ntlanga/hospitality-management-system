@@ -107,3 +107,15 @@ classDiagram
     Room "1" --> "0..*" HousekeepingTask : requiresCleaning
     StaffAccount "1" o--> "0..*" HousekeepingTask : assignedTo
     StaffAccount "1" --> "0..*" ServiceRequest : handles
+```
+
+Explanation of Key Design Decisions
+Multiplicity: Guest–Booking is 1 to 0..* (one guest many bookings). Booking–Payment is 1 to 1 (one payment per booking). Room–Booking is 1 to 0..* (one room many bookings over time).
+
+Aggregation vs. Composition: StaffAccount to HousekeepingTask uses aggregation (open diamond) because a task can be reassigned if staff leaves.
+
+Attributes visibility: All attributes are private (-), methods public (+).
+
+Data types: Used String, Integer, Double, Boolean, Date, DateTime, List.
+
+Alignment with prior work: Status attributes match state diagrams from Assignment 8. Methods map to use cases and activity diagrams.
