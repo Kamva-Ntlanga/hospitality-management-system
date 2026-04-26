@@ -109,7 +109,8 @@ classDiagram
     StaffAccount "1" --> "0..*" ServiceRequest : handles
 ```
 
-Explanation of Key Design Decisions
+### Explanation of Key Design Decisions
+
 Multiplicity: Guest–Booking is 1 to 0..* (one guest many bookings). Booking–Payment is 1 to 1 (one payment per booking). Room–Booking is 1 to 0..* (one room many bookings over time).
 
 Aggregation vs. Composition: StaffAccount to HousekeepingTask uses aggregation (open diamond) because a task can be reassigned if staff leaves.
