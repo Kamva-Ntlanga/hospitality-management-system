@@ -1,6 +1,6 @@
 # Changelog - HotelHub
 
-## [0.1.0] - 2025-05-01
+## 2025-05-01
 
 ### Added
 - Initial class implementations (Room, Guest, Booking, Payment, HousekeepingTask, ServiceRequest, StaffAccount)
