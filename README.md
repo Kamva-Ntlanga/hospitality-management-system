@@ -50,6 +50,38 @@ The Hospitality Management System digitizes and automates core hotel operations,
 - [Domain Model Documentation](domain_model.md)
 - [Class Diagram](class_diagram.md)
 - [Reflection](REFLECTION_ASSIGNMENT9.md)
+
+  ## Assignment 10: From Class Diagrams to Code with Creational Patterns
+
+### Language Choice
+**Python 3.9+** – chosen for simplicity, built-in unittest, and clean syntax.
+
+### Class Implementation (`/src`)
+- [Room](src/room.py)
+- [Guest](src/guest.py)
+- [Booking](src/booking.py)
+- [Payment](src/payment.py)
+- [HousekeepingTask](src/housekeeping_task.py)
+- [ServiceRequest](src/service_request.py)
+- [StaffAccount](src/staff_account.py)
+
+### Creational Patterns (`/creational_patterns`)
+| Pattern | File | Use Case |
+|---------|------|----------|
+| Simple Factory | `simple_factory.py` | Centralised room creation |
+| Factory Method | `factory_method.py` | Payment processor selection |
+| Abstract Factory | `abstract_factory.py` | Amenity families |
+| Builder | `builder.py` | Complex booking construction |
+| Prototype | `prototype.py` | Cloning room templates |
+| Singleton | `singleton.py` | Database connection |
+
+### Unit Tests (`/tests`)
+- [Class Tests](tests/test_classes.py)
+- [Pattern Tests](tests/test_creational_patterns.py)
+
+### Running Tests
+```bash
+python -m unittest discover tests
   
 ### GitHub Agile Tools Used
 - **Issues:** 16 user stories created
