@@ -2,7 +2,7 @@
 
 ## 2025-05-01
 
-### Added
+### Added -  Assignment 10
 - Initial class implementations (Room, Guest, Booking, Payment, HousekeepingTask, ServiceRequest, StaffAccount)
 - Simple Factory pattern: RoomFactory
 - Factory Method pattern: PaymentProcessor
