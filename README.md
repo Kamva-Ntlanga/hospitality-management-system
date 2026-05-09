@@ -111,61 +111,45 @@ Builds on the Hospitality Management System with detailed stakeholder analysis a
 Used generics `Repository[T, ID]` to avoid code duplication across all entity repositories.
 
 ### Factory Pattern for Storage Switching
+The `RepositoryFactory` allows switching between storage backends (MEMORY, DATABASE, FILESYSTEM).
 
-The `RepositoryFactory` allows switching between storage backends:
-
-```python
-from factories.repository_factory import RepositoryFactory, StorageType
-
-repo = RepositoryFactory.create_room_repository(StorageType.MEMORY)
-# Future: repo = RepositoryFactory.create_room_repository(StorageType.DATABASE)
 ### Storage Types
 
 | Type | Status |
 |------|--------|
-| MEMORY | ✅ Implemented |
-| DATABASE | 🔜 Future |
-| FILESYSTEM | 🔜 Future |
+| MEMORY | Implemented |
+| DATABASE | Future |
+| FILESYSTEM | Future |
 
 ### Repository Files
+- `/repositories/repository_interface.py`
+- `/repositories/room_repository.py`
+- `/repositories/guest_repository.py`
+- `/repositories/booking_repository.py`
+- `/repositories/payment_repository.py`
+- `/repositories/housekeeping_repository.py`
+- `/repositories/service_request_repository.py`
+- `/repositories/staff_account_repository.py`
 
-| File | Location |
-|------|----------|
-| repository_interface.py | `/repositories` |
-| room_repository.py | `/repositories` |
-| guest_repository.py | `/repositories` |
-| booking_repository.py | `/repositories` |
-| payment_repository.py | `/repositories` |
-| housekeeping_repository.py | `/repositories` |
-| service_request_repository.py | `/repositories` |
-| staff_account_repository.py | `/repositories` |
-
-### In-Memory Implementations
-
-All files located in `/repositories/inmemory/`:
-
-- in_memory_base.py
-- in_memory_room_repository.py
-- in_memory_guest_repository.py
-- in_memory_booking_repository.py
-- in_memory_payment_repository.py
-- in_memory_housekeeping_repository.py
-- in_memory_service_request_repository.py
-- in_memory_staff_account_repository.py
+### In-Memory Implementations (in `/repositories/inmemory/`)
+- `in_memory_base.py`
+- `in_memory_room_repository.py`
+- `in_memory_guest_repository.py`
+- `in_memory_booking_repository.py`
+- `in_memory_payment_repository.py`
+- `in_memory_housekeeping_repository.py`
+- `in_memory_service_request_repository.py`
+- `in_memory_staff_account_repository.py`
 
 ### Factory
-
 - `/factories/repository_factory.py`
 
 ### Future Database Stub
-
 - `/future_stubs/database_repository_stub.py`
 
 ### Unit Tests
-
 - `/tests/test_in_memory_repositories.py`
 - `/tests/test_repository_factory.py`
 
 ### Class Diagram
-
 - [repository_class_diagram.md](./repository_class_diagram.md)
