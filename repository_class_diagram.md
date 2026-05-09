@@ -70,8 +70,7 @@ classDiagram
     RepositoryFactory ..> RoomRepository : creates
     RepositoryFactory ..> GuestRepository : creates
     RepositoryFactory ..> BookingRepository : creates
-
-```mermaid
+```
 
 ### Explanation
 
