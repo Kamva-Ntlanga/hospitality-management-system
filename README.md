@@ -107,11 +107,14 @@ Builds on the Hospitality Management System with detailed stakeholder analysis a
 
 ## Assignment 11: Repository Pattern and Storage Abstraction
 
-### Repository Pattern
+### Language Choice
+Python 3.9+ – continues from Assignment 10.
+
+### Repository Pattern Justification
 Used generics `Repository[T, ID]` to avoid code duplication across all entity repositories.
 
-### Factory Pattern for Storage Switching
-The `RepositoryFactory` allows switching between storage backends (MEMORY, DATABASE, FILESYSTEM).
+### Storage Abstraction Mechanism: Factory Pattern
+The `RepositoryFactory` class allows switching between storage backends (MEMORY, DATABASE, FILESYSTEM).
 
 ### Storage Types
 
@@ -121,35 +124,57 @@ The `RepositoryFactory` allows switching between storage backends (MEMORY, DATAB
 | DATABASE | Future |
 | FILESYSTEM | Future |
 
-### Repository Files
-- `/repositories/repository_interface.py`
-- `/repositories/room_repository.py`
-- `/repositories/guest_repository.py`
-- `/repositories/booking_repository.py`
-- `/repositories/payment_repository.py`
-- `/repositories/housekeeping_repository.py`
-- `/repositories/service_request_repository.py`
-- `/repositories/staff_account_repository.py`
+### Repository Interfaces (`/repositories`)
 
-### In-Memory Implementations (in `/repositories/inmemory/`)
-- `in_memory_base.py`
-- `in_memory_room_repository.py`
-- `in_memory_guest_repository.py`
-- `in_memory_booking_repository.py`
-- `in_memory_payment_repository.py`
-- `in_memory_housekeeping_repository.py`
-- `in_memory_service_request_repository.py`
-- `in_memory_staff_account_repository.py`
+| File | Description |
+|------|-------------|
+| [repositories/__init__.py](./repositories/__init__.py) | Package initializer |
+| [repositories/repository_interface.py](./repositories/repository_interface.py) | Generic CRUD interface |
+| [repositories/room_repository.py](./repositories/room_repository.py) | Room-specific queries |
+| [repositories/guest_repository.py](./repositories/guest_repository.py) | Guest-specific queries |
+| [repositories/booking_repository.py](./repositories/booking_repository.py) | Booking-specific queries |
+| [repositories/payment_repository.py](./repositories/payment_repository.py) | Payment-specific queries |
+| [repositories/housekeeping_repository.py](./repositories/housekeeping_repository.py) | Housekeeping-specific queries |
+| [repositories/service_request_repository.py](./repositories/service_request_repository.py) | Service request queries |
+| [repositories/staff_account_repository.py](./repositories/staff_account_repository.py) | Staff account queries |
 
-### Factory
-- `/factories/repository_factory.py`
+### In-Memory Implementations (`/repositories/inmemory`)
 
-### Future Database Stub
-- `/future_stubs/database_repository_stub.py`
+| File | Description |
+|------|-------------|
+| [repositories/inmemory/__init__.py](./repositories/inmemory/__init__.py) | Package initializer |
+| [repositories/inmemory/in_memory_base.py](./repositories/inmemory/in_memory_base.py) | Base HashMap storage |
+| [repositories/inmemory/in_memory_room_repository.py](./repositories/inmemory/in_memory_room_repository.py) | In-memory Room repository |
+| [repositories/inmemory/in_memory_guest_repository.py](./repositories/inmemory/in_memory_guest_repository.py) | In-memory Guest repository |
+| [repositories/inmemory/in_memory_booking_repository.py](./repositories/inmemory/in_memory_booking_repository.py) | In-memory Booking repository |
+| [repositories/inmemory/in_memory_payment_repository.py](./repositories/inmemory/in_memory_payment_repository.py) | In-memory Payment repository |
+| [repositories/inmemory/in_memory_housekeeping_repository.py](./repositories/inmemory/in_memory_housekeeping_repository.py) | In-memory Housekeeping repository |
+| [repositories/inmemory/in_memory_service_request_repository.py](./repositories/inmemory/in_memory_service_request_repository.py) | In-memory Service Request repository |
+| [repositories/inmemory/in_memory_staff_account_repository.py](./repositories/inmemory/in_memory_staff_account_repository.py) | In-memory Staff Account repository |
 
-### Unit Tests
-- `/tests/test_in_memory_repositories.py`
-- `/tests/test_repository_factory.py`
+### Factory (`/factories`)
+
+| File | Description |
+|------|-------------|
+| [factories/__init__.py](./factories/__init__.py) | Package initializer |
+| [factories/repository_factory.py](./factories/repository_factory.py) | Factory for creating repositories |
+
+### Future Database Stub (`/future_stubs`)
+
+| File | Description |
+|------|-------------|
+| [future_stubs/__init__.py](./future_stubs/__init__.py) | Package initializer |
+| [future_stubs/database_repository_stub.py](./future_stubs/database_repository_stub.py) | Database implementation stub |
+
+### Unit Tests (`/tests`)
+
+| File | Description |
+|------|-------------|
+| [tests/test_in_memory_repositories.py](./tests/test_in_memory_repositories.py) | Tests for in-memory repositories |
+| [tests/test_repository_factory.py](./tests/test_repository_factory.py) | Tests for repository factory |
 
 ### Class Diagram
-- [repository_class_diagram.md](./repository_class_diagram.md)
+
+| File | Description |
+|------|-------------|
+| [repository_class_diagram.md](./repository_class_diagram.md) | Updated class diagram with repository layer |
