@@ -71,7 +71,9 @@ classDiagram
     RepositoryFactory ..> GuestRepository : creates
     RepositoryFactory ..> BookingRepository : creates
 
-### Brief Explanation
+```mermaid
+
+### Explanation
 
 The Repository Class Diagram illustrates the structure of the repository layer used in the Hospitality Management System. At the core of the design is the generic `Repository<T, ID>` interface, which defines common CRUD operations such as saving, finding, deleting, and counting entities.
 
