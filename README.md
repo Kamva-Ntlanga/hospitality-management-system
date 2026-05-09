@@ -106,5 +106,6 @@ Builds on the Hospitality Management System with detailed stakeholder analysis a
 | [tests/test_creational_patterns.py](./tests/test_creational_patterns.py) | Unit tests for all creational patterns |
 
 ### Running Tests
+
 ```bash
 python -m unittest discover tests
