@@ -105,4 +105,18 @@ Builds on the Hospitality Management System with detailed stakeholder analysis a
 | [tests/test_classes.py](./tests/test_classes.py) | Unit tests for all domain classes |
 | [tests/test_creational_patterns.py](./tests/test_creational_patterns.py) | Unit tests for all creational patterns |
 
+## Assignment 11: Repository Pattern and Storage Abstraction
+
+### Repository Pattern
+Used generics `Repository[T, ID]` to avoid code duplication across all entity repositories.
+
+### Factory Pattern for Storage Switching
+
+The `RepositoryFactory` allows switching between storage backends:
+
+```python
+from factories.repository_factory import RepositoryFactory, StorageType
+
+repo = RepositoryFactory.create_room_repository(StorageType.MEMORY)
+# Future: repo = RepositoryFactory.create_room_repository(StorageType.DATABASE)
 
