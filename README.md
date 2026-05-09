@@ -178,3 +178,17 @@ The `RepositoryFactory` class allows switching between storage backends (MEMORY,
 | File | Description |
 |------|-------------|
 | [repository_class_diagram.md](./repository_class_diagram.md) | Updated class diagram with repository layer |
+
+##  Author Information
+
+**Name:** Kamva Ntlanga
+
+**Student ID:** 240497821
+
+**Course:** Software Engineering
+
+**Date:** March 8, 2026
+
+##  License
+
+This project is created for educational purposes as part of a Software Engineering assignment. this is the read me, now give me one for assigmnent 11
