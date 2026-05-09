@@ -109,5 +109,3 @@ Builds on the Hospitality Management System with detailed stakeholder analysis a
 
 ```bash
 python -m unittest discover tests
-
-```bash
