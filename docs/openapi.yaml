@@ -1,1 +1,186 @@
+openapi: 3.0.0
+info:
+  title: HotelHub API
+  description: REST API for Hospitality Management System
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+    description: Local development server
 
+paths:
+  /api/rooms:
+    get:
+      summary: Get all rooms
+      responses:
+        '200':
+          description: List of rooms
+    post:
+      summary: Create a new room
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                room_id:
+                  type: string
+                room_number:
+                  type: string
+                room_type:
+                  type: string
+                  enum: [Standard, Deluxe, Suite]
+                price_per_night:
+                  type: number
+                floor:
+                  type: integer
+                max_guests:
+                  type: integer
+      responses:
+        '201':
+          description: Room created
+        '400':
+          description: Invalid input
+
+  /api/rooms/{room_id}:
+    get:
+      summary: Get room by ID
+      parameters:
+        - name: room_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Room found
+        '404':
+          description: Room not found
+
+  /api/guests:
+    get:
+      summary: Get all guests
+      responses:
+        '200':
+          description: List of guests
+    post:
+      summary: Create a new guest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                guest_id:
+                  type: string
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+                email:
+                  type: string
+                phone:
+                  type: string
+      responses:
+        '201':
+          description: Guest created
+        '400':
+          description: Invalid input
+
+  /api/bookings:
+    get:
+      summary: Get all bookings
+      responses:
+        '200':
+          description: List of bookings
+    post:
+      summary: Create a new booking
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                booking_id:
+                  type: string
+                guest_id:
+                  type: string
+                room_id:
+                  type: string
+                check_in_date:
+                  type: string
+                  format: date
+                check_out_date:
+                  type: string
+                  format: date
+                number_of_guests:
+                  type: integer
+                special_requests:
+                  type: string
+      responses:
+        '201':
+          description: Booking created
+        '400':
+          description: Invalid input
+
+  /api/bookings/{booking_id}/confirm:
+    post:
+      summary: Confirm a booking
+      parameters:
+        - name: booking_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Booking confirmed
+        '400':
+          description: Cannot confirm
+
+  /api/bookings/{booking_id}/cancel:
+    post:
+      summary: Cancel a booking
+      parameters:
+        - name: booking_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Booking cancelled
+        '400':
+          description: Cannot cancel
+
+  /api/bookings/{booking_id}/checkin:
+    post:
+      summary: Process check-in
+      parameters:
+        - name: booking_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Check-in successful
+        '400':
+          description: Cannot check in
+
+  /api/bookings/{booking_id}/checkout:
+    post:
+      summary: Process check-out
+      parameters:
+        - name: booking_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Check-out successful
+        '400':
+          description: Cannot check out
