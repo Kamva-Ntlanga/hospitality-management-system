@@ -249,6 +249,8 @@ The `RepositoryFactory` class allows switching between storage backends (MEMORY,
 
 The API is fully documented using **OpenAPI (Swagger)**. FastAPI automatically generates interactive documentation.
 
+- [OpenAPI Specification](./docs/openapi.yaml)
+
 #### Screenshot
 
 [swagger-ui.PNG](./swagger-ui.PNG)
