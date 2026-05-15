@@ -179,6 +179,77 @@ The `RepositoryFactory` class allows switching between storage backends (MEMORY,
 |------|-------------|
 | [repository_class_diagram.md](./repository_class_diagram.md) | Updated class diagram with repository layer |
 
+
+## Assignment 12: Service Layer and REST API Implementation
+
+### Language Choice
+**Python 3.9+ with FastAPI** – chosen for speed, automatic OpenAPI documentation, and ease of use.
+
+### Service Layer (`/services`)
+
+| File | Description |
+|------|-------------|
+| [services/room_service.py](./services/room_service.py) | Room business logic (create, update status, delete rules) |
+| [services/guest_service.py](./services/guest_service.py) | Guest business logic (email validation, loyalty points) |
+| [services/booking_service.py](./services/booking_service.py) | Booking business logic (date validation, overlapping checks, capacity rules) |
+
+### REST API Endpoints
+
+#### Rooms
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/rooms` | Get all rooms |
+| GET | `/api/rooms/available` | Get available rooms |
+| GET | `/api/rooms/{room_id}` | Get room by ID |
+| POST | `/api/rooms` | Create new room |
+| PUT | `/api/rooms/{room_id}/status` | Update room status |
+| DELETE | `/api/rooms/{room_id}` | Delete room |
+
+#### Guests
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/guests` | Get all guests |
+| GET | `/api/guests/{guest_id}` | Get guest by ID |
+| POST | `/api/guests` | Create new guest |
+| PUT | `/api/guests/{guest_id}` | Update guest profile |
+| POST | `/api/guests/{guest_id}/points` | Add loyalty points |
+| DELETE | `/api/guests/{guest_id}` | Delete guest |
+
+#### Bookings
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/bookings` | Get all bookings |
+| GET | `/api/bookings/upcoming` | Get upcoming bookings |
+| GET | `/api/bookings/guest/{guest_id}` | Get bookings by guest |
+| GET | `/api/bookings/{booking_id}` | Get booking by ID |
+| POST | `/api/bookings` | Create new booking |
+| POST | `/api/bookings/{booking_id}/confirm` | Confirm booking |
+| POST | `/api/bookings/{booking_id}/cancel` | Cancel booking |
+| POST | `/api/bookings/{booking_id}/checkin` | Process check-in |
+| POST | `/api/bookings/{booking_id}/checkout` | Process check-out |
+
+### Business Rules Implemented
+
+| Entity | Business Rule |
+|--------|---------------|
+| Room | Room number must be unique |
+| Room | Price per night must be positive |
+| Room | Cannot delete room if booked or occupied |
+| Guest | Email must be unique and contain @ symbol |
+| Guest | Phone number must be at least 10 digits |
+| Booking | Check-in must be before check-out |
+| Booking | Check-in cannot be in the past |
+| Booking | Booking cannot exceed 30 days |
+| Booking | Room must be available |
+| Booking | Number of guests cannot exceed room capacity |
+| Booking | No overlapping bookings for same room |
+
+### Running the API Server
+
+1. Install dependencies:
+```bash
+pip install fastapi uvicorn pydantic httpx pytest
+
 ### API Documentation
 
 The API is documented using Swagger UI. Screenshot below:
