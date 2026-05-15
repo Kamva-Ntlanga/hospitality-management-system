@@ -244,19 +244,6 @@ The `RepositoryFactory` class allows switching between storage backends (MEMORY,
 | Booking | Number of guests cannot exceed room capacity |
 | Booking | No overlapping bookings for same room |
 
-### Running the API Server
-
-1. Install dependencies:
-```bash
-pip install fastapi uvicorn pydantic httpx pytest
-
-### API Documentation
-
-The API is documented using Swagger UI. Screenshot below:
-
-![Swagger UI](swagger-ui-full.png)
-
-Live docs available at `http://localhost:8000/docs` when running locally.
 
 ##  Author Information
 
