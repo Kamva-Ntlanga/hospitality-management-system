@@ -179,6 +179,14 @@ The `RepositoryFactory` class allows switching between storage backends (MEMORY,
 |------|-------------|
 | [repository_class_diagram.md](./repository_class_diagram.md) | Updated class diagram with repository layer |
 
+### API Documentation
+
+The API is documented using Swagger UI. Screenshot below:
+
+![Swagger UI](swagger-ui-full.png)
+
+Live docs available at `http://localhost:8000/docs` when running locally.
+
 ##  Author Information
 
 **Name:** Kamva Ntlanga
