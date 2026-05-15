@@ -251,7 +251,7 @@ The API is fully documented using **OpenAPI (Swagger)**. FastAPI automatically g
 
 #### Screenshot
 
-![Swagger UI](swagger-ui.PNG)
+[![Swagger UI](swagger-ui.PNG)](swagger-ui.PNG)
 
 #### Access Documentation
 
