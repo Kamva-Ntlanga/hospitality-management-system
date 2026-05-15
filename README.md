@@ -245,6 +245,34 @@ The `RepositoryFactory` class allows switching between storage backends (MEMORY,
 | Booking | No overlapping bookings for same room |
 
 
+### API Documentation (Swagger UI)
+
+The API is fully documented using **OpenAPI (Swagger)**. FastAPI automatically generates interactive documentation.
+
+#### Screenshot
+
+![Swagger UI](swagger-ui-full.png)
+
+#### Access Documentation
+
+When the server is running, visit:
+
+| URL | Description |
+|-----|-------------|
+| `http://localhost:8000/docs` | Swagger UI (interactive API testing) |
+| `http://localhost:8000/redoc` | ReDoc (alternative documentation view) |
+| `http://localhost:8000/openapi.json` | Raw OpenAPI JSON specification |
+
+#### What the Documentation Shows
+
+- All available endpoints (GET, POST, PUT, DELETE)
+- Request body schemas (what data to send)
+- Response schemas (what data to expect)
+- Error responses (400, 404, 500)
+- Try it out functionality (test endpoints directly from browser)
+
+  
+
 ##  Author Information
 
 **Name:** Kamva Ntlanga
