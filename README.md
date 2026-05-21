@@ -273,7 +273,7 @@ When the server is running, visit:
 - Error responses (400, 404, 500)
 - Try it out functionality (test endpoints directly from browser)
 
-  ## Assignment 13: CI/CD with GitHub Actions
+ ## Assignment 13: CI/CD with GitHub Actions
 
 ### CI/CD Pipeline Overview
 
