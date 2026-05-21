@@ -273,6 +273,30 @@ When the server is running, visit:
 - Error responses (400, 404, 500)
 - Try it out functionality (test endpoints directly from browser)
 
+  ## Assignment 13: CI/CD with GitHub Actions
+
+### CI/CD Pipeline Overview
+
+The project uses GitHub Actions for continuous integration and continuous delivery.
+
+| Trigger | Action |
+|---------|--------|
+| Push to any branch | Runs all unit and integration tests |
+| Pull request to main | Runs tests and blocks merge if tests fail |
+| Push to main (after tests pass) | Builds and uploads release artifact |
+
+### Running Tests Locally
+
+```bash
+# Install dependencies
+pip install fastapi uvicorn pydantic httpx pytest pytest-cov
+
+# Run all tests
+python -m pytest tests/ -v
+
+# Run with coverage
+python -m pytest tests/ -v --cov=src --cov=services --cov=api
+
   
 
 ##  Author Information
