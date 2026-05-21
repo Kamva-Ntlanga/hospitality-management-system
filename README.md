@@ -273,7 +273,7 @@ When the server is running, visit:
 - Error responses (400, 404, 500)
 - Try it out functionality (test endpoints directly from browser)
 
- ## Assignment 13: CI/CD with GitHub Actions
+## Assignment 13: CI/CD with GitHub Actions
 
 ### CI/CD Pipeline Overview
 
@@ -287,17 +287,37 @@ The project uses GitHub Actions for continuous integration and continuous delive
 
 ### Running Tests Locally
 
-```bash
-# Install dependencies
-pip install fastapi uvicorn pydantic httpx pytest pytest-cov
+- Install dependencies: pip install fastapi uvicorn pydantic httpx pytest pytest-cov
+- Run all tests: python -m pytest tests/ -v
+- Run with coverage: `python -m pytest tests/ -v --cov=src --cov=services --cov=api
 
-# Run all tests
-python -m pytest tests/ -v
+### Branch Protection
 
-# Run with coverage
-python -m pytest tests/ -v --cov=src --cov=services --cov=api
+The `main` branch is protected with the following rules:
+- Require pull request reviews (1 approval)
+- Require status checks to pass (Run Tests)
+- Require branches to be up to date
+- Block force pushes
 
-  
+See [PROTECTION.md](./PROTECTION.md) for details.
+
+### GitHub Actions Workflow
+
+- [CI/CD Pipeline](.github/workflows/ci.yml)
+
+### Screenshots
+
+- [Branch Protection Rules](./branch-protection.png)
+- [CI Test Results](./ci-test-results.png)
+- [Pull Request Approved](./pr-approved.png)
+- [Release Artifact](./release-artifact.png)
+
+### Workflow Status
+
+The CI/CD pipeline:
+1. Runs automatically on every push and PR
+2. Blocks PR merges if tests fail
+3. Generates release artifact when merged to main
 
 ##  Author Information
 
