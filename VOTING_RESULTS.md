@@ -4,8 +4,8 @@
 
 | Metric | Count |
 |--------|-------|
-| Stars | 6 |
-| Forks | 5 |
+| Stars | 18 |
+| Forks | 18 |
 
 ## Instructions for Classmates
 
