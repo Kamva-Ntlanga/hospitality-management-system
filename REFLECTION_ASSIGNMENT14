@@ -1,0 +1,40 @@
+# Assignment 14 Reflection: Open-Source Collaboration
+
+## How I Improved My Repository Based on Peer Feedback
+
+Before this assignment, my repository had good code but lacked documentation for external contributors. I added several key files to make it open-source ready:
+
+**CONTRIBUTING.md** – This file provides setup instructions, coding standards, and guidelines for submitting pull requests. It tells new contributors how to set up the project, run tests, and submit changes.
+
+**ROADMAP.md** – This shows future plans and priorities. Contributors can see what features are planned and where help is needed.
+
+**LICENSE** – I added an MIT license so others know they can use, modify, and distribute the code.
+
+**Issue Labels** – I labeled 5 issues as `good-first-issue` for beginners and 3 issues as `feature-request` for desired enhancements.
+
+**README Update** – I added a "Getting Started" section and a "Features for Contribution" table to make onboarding easier.
+
+## Challenges in Onboarding Contributors
+
+The biggest challenge was thinking like a new contributor. I had to imagine what someone who has never seen my project would need to know. What files do they need? Where do they start? What will confuse them?
+
+Another challenge was writing clear setup instructions. Commands like `python -m venv venv` are obvious to me but may be confusing to beginners. I tried to explain each step clearly.
+
+Labeling issues was also challenging. "Good first issues" must be small, well-scoped, and not require deep understanding of the whole system. I chose basic class implementations because they are self-contained.
+
+## Lessons Learned About Open-Source Collaboration
+
+First, **documentation is as important as code**. Without clear guidelines, even great code is hard to contribute to. The CONTRIBUTING.md file is essential – it tells people how to help.
+
+Second, **issue labels matter**. Labels like `good-first-issue` signal to newcomers where to start. Without them, potential contributors may feel overwhelmed and leave.
+
+Third, **open-source is social**. The star and fork system is not just about metrics – it's about visibility and trust. A project with stars and forks is more likely to attract contributors.
+
+Fourth, **reciprocity is important**. In open-source, you contribute to others' projects, and they contribute to yours. I starred and forked my classmates' repositories as they did for mine.
+
+Finally, **preparing a repository for open-source takes time**. I understand now why professional projects have dedicated documentation maintainers. It's a lot of work to make a project welcoming to strangers.
+
+## How I Will Use These Lessons
+
+Going forward, I will always include CONTRIBUTING.md and a license in my projects. I will label issues from the start, not at the end. And I will actively engage with other developers' projects to build community.
+
