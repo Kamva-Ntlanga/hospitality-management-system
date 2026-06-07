@@ -26,10 +26,10 @@ class InMemoryServiceRequestRepository(ServiceRequestRepository):
         return self._storage.count()
     
     def find_by_guest_id(self, guest_id: str) -> List[ServiceRequest]:
-        return [r for r in self.find_all() if r.get_guest().get_guest_id() == guest_id]
+        return [r for r in self.find_all() if r.get_guest_id() == guest_id]
     
     def find_by_room_id(self, room_id: str) -> List[ServiceRequest]:
-        return [r for r in self.find_all() if r.get_room().get_room_id() == room_id]
+        return [r for r in self.find_all() if r.get_room_id() == room_id]
     
     def find_by_status(self, status: RequestStatus) -> List[ServiceRequest]:
         return [r for r in self.find_all() if r.get_status() == status]

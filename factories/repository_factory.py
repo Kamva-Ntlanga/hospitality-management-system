@@ -57,5 +57,14 @@ class RepositoryFactory:
             return DatabaseBookingRepository()
         else:
             raise ValueError(f"Unknown storage type: {storage_type}")
-    
-    # Additional create methods for Payment, Housekeeping, ServiceRequest, StaffAccount
+
+    @staticmethod
+    def create_service_request_repository(storage_type: StorageType = StorageType.MEMORY) -> ServiceRequestRepository:
+        if storage_type == StorageType.MEMORY:
+            return InMemoryServiceRequestRepository()
+        elif storage_type == StorageType.DATABASE:
+            raise ValueError("Database storage is not implemented for service requests")
+        else:
+            raise ValueError(f"Unknown storage type: {storage_type}")
+
+    # Additional create methods for Payment, Housekeeping, StaffAccount
