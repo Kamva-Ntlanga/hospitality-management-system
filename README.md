@@ -199,6 +199,49 @@ Documentation for all assignments, diagrams, and project artifacts can be found 
 ## 👤 Author
 
 **Kamva Ntlanga**
+## Assignment 14: Open-Source Collaboration
+
+### Getting Started
+
+#### Prerequisites
+- Python 3.9 or higher
+- Git
+- GitHub account
+
+#### Installation
+
+1. Fork the repository
+2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/hospitality-management-system.git`
+3. Create a virtual environment: `python -m venv venv`
+4. Activate it: `source venv/bin/activate` (Windows: `venv\Scripts\activate`)
+5. Install dependencies: `pip install -r requirements.txt`
+6. Run tests: `python -m pytest tests/ -v`
+
+### Features for Contribution
+
+| Feature | Difficulty | Labels | Issue |
+|---------|------------|--------|-------|
+| Search for available rooms | Easy | `good-first-issue` | #1 |
+| Book a room | Easy | `good-first-issue` | #2 |
+| Make payment for booking | Easy | `good-first-issue` | #3 |
+| Online check-in | Easy | `good-first-issue` | #4 |
+| Request services | Easy | `good-first-issue` | #5 |
+| Manage housekeeping tasks | Medium | `feature-request` | #6 |
+
+### Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines.
+
+### Roadmap
+
+See [ROADMAP.md](./ROADMAP.md) for future plans.
+
+### License
+
+This project is licensed under the MIT License - see [LICENSE](./LICENSE) for details.
+
+
+##  Author Information
 
 - Student ID: 240497821
 - Course: Software Engineering
