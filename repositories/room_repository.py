@@ -1,6 +1,7 @@
 from typing import List, Optional
 from repositories.repository_interface import Repository
 from src.room import Room
+from abc import ABC, abstractmethod
 
 class RoomRepository(Repository[Room, str]):
     """
