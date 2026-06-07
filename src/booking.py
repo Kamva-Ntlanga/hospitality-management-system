@@ -10,6 +10,19 @@ class BookingStatus(Enum):
     CANCELLED = "Cancelled"
 
 class Booking:
+    """
+    Represents a hotel booking made by a guest for a specific room.
+
+    This class manages booking lifecycle states such as:
+    Pending, Confirmed, Checked-In, Completed, and Cancelled.
+
+    It also handles:
+    - Total price calculation based on room rate and stay duration
+    - Booking status transitions (confirm, cancel, check-in, check-out)
+    - Payment association
+    - Loyalty points allocation upon completion
+    """
+
     def __init__(self, booking_id: str, guest, room, check_in_date: date, 
                  check_out_date: date, number_of_guests: int, special_requests: str = ""):
         self._booking_id = booking_id
