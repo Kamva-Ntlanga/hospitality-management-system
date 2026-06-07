@@ -11,7 +11,9 @@ from repositories.inmemory.in_memory_room_repository import InMemoryRoomReposito
 from repositories.inmemory.in_memory_guest_repository import InMemoryGuestRepository
 from repositories.inmemory.in_memory_booking_repository import InMemoryBookingRepository
 from src.room import RoomType, RoomStatus
+from src.room import Room, RoomType, RoomStatus
 from src.booking import BookingStatus
+from src.guest import Guest
 
 class TestRoomService(unittest.TestCase):
     def setUp(self):
@@ -127,6 +129,48 @@ class TestBookingService(unittest.TestCase):
         )
         cancelled = self.service.cancel_booking("B001")
         self.assertEqual(cancelled.get_status(), BookingStatus.CANCELLED)
+
+
+from services.service_request_service import ServiceRequestService, StaffNotificationService
+from repositories.inmemory.in_memory_service_request_repository import InMemoryServiceRequestRepository
+from src.service_request import RequestCategory, RequestStatus
+
+class TestServiceRequestService(unittest.TestCase):
+    def setUp(self):
+        self.repo = InMemoryServiceRequestRepository()
+        self.notifications = StaffNotificationService()
+        self.service = ServiceRequestService(self.repo, self.notifications)
+
+    def test_create_service_request_success(self):
+        request = self.service.create_service_request(
+            "guest-001", "205", RequestCategory.HOUSEKEEPING, "Please bring extra towels"
+        )
+
+        self.assertEqual(request.get_guest_id(), "guest-001")
+        self.assertEqual(request.get_room_number(), "205")
+        self.assertEqual(request.get_status(), RequestStatus.PENDING)
+        self.assertEqual(self.repo.count(), 1)
+
+    def test_estimated_completion_time_by_category(self):
+        housekeeping = self.service.create_service_request("guest-001", "205", RequestCategory.HOUSEKEEPING)
+        room_service = self.service.create_service_request("guest-002", "206", RequestCategory.ROOM_SERVICE)
+        maintenance = self.service.create_service_request("guest-003", "207", RequestCategory.MAINTENANCE)
+
+        self.assertEqual(housekeeping.get_estimated_completion_minutes(), 15)
+        self.assertEqual(room_service.get_estimated_completion_minutes(), 30)
+        self.assertEqual(maintenance.get_estimated_completion_minutes(), 45)
+
+    def test_invalid_category_rejected(self):
+        with self.assertRaises(ValueError):
+            self.service.create_service_request("guest-001", "205", "SPA")
+
+    def test_staff_notification_is_generated(self):
+        self.service.create_service_request("guest-001", "205", RequestCategory.HOUSEKEEPING)
+
+        self.assertEqual(
+            self.service.get_staff_notifications(),
+            ["New HOUSEKEEPING request for room 205"],
+        )
 
 if __name__ == "__main__":
     unittest.main()

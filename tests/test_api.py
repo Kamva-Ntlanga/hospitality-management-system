@@ -159,5 +159,34 @@ class TestBookingAPI(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()["status"], "Confirmed")
 
+class TestServiceRequestAPI(unittest.TestCase):
+    def test_create_service_request(self):
+        response = client.post("/api/service-requests", json={
+            "guestId": "guest-001",
+            "roomNumber": "205",
+            "category": "HOUSEKEEPING",
+            "specialInstructions": "Please bring extra towels"
+        })
+
+        self.assertEqual(response.status_code, 201)
+        payload = response.json()
+        self.assertEqual(payload["guestId"], "guest-001")
+        self.assertEqual(payload["roomNumber"], "205")
+        self.assertEqual(payload["category"], "HOUSEKEEPING")
+        self.assertEqual(payload["specialInstructions"], "Please bring extra towels")
+        self.assertEqual(payload["status"], "PENDING")
+        self.assertEqual(payload["estimatedCompletionMinutes"], 15)
+        self.assertEqual(payload["staffNotification"], "New HOUSEKEEPING request for room 205")
+
+    def test_create_service_request_invalid_category(self):
+        response = client.post("/api/service-requests", json={
+            "guestId": "guest-001",
+            "roomNumber": "205",
+            "category": "SPA",
+            "specialInstructions": "Please book a massage"
+        })
+
+        self.assertEqual(response.status_code, 422)
+
 if __name__ == "__main__":
     unittest.main()

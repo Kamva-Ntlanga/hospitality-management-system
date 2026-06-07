@@ -9,7 +9,11 @@ class InMemoryRoomRepository(RoomRepository):
     
     def save(self, entity: Room) -> None:
         self._storage.save(entity, entity.get_room_id())
-    
+
+    def save_with_return(self, entity):
+        self.save(entity)
+        return entity
+
     def find_by_id(self, id: str) -> Optional[Room]:
         return self._storage.find_by_id(id)
     

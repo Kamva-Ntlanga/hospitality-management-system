@@ -184,3 +184,51 @@ paths:
           description: Check-out successful
         '400':
           description: Cannot check out
+
+  /api/service-requests:
+    get:
+      summary: Get all guest service requests
+      responses:
+        '200':
+          description: List of service requests
+    post:
+      summary: Create a guest service request
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [guestId, roomNumber, category]
+              properties:
+                guestId:
+                  type: string
+                roomNumber:
+                  type: string
+                category:
+                  type: string
+                  enum: [HOUSEKEEPING, ROOM_SERVICE, MAINTENANCE]
+                specialInstructions:
+                  type: string
+      responses:
+        '201':
+          description: Service request created with estimated completion time and staff notification placeholder
+        '400':
+          description: Invalid input
+        '422':
+          description: Validation error
+
+  /api/service-requests/{request_id}:
+    get:
+      summary: Get guest service request by ID
+      parameters:
+        - name: request_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Service request found
+        '404':
+          description: Service request not found
