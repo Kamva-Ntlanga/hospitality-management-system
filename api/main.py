@@ -7,19 +7,22 @@ from factories.repository_factory import RepositoryFactory, StorageType
 from services.room_service import RoomService
 from services.guest_service import GuestService
 from services.booking_service import BookingService
+from services.housekeeping_service import HousekeepingService
 from api.room_routes import router as room_router
 from api.guest_routes import router as guest_router
 from api.booking_routes import router as booking_router
+from api.housekeeping_routes import router as housekeeping_router
 
 # Global service instances
 room_service = None
 guest_service = None
 booking_service = None
+housekeeping_service = None
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Startup - initialize services with in-memory repositories
-    global room_service, guest_service, booking_service
+    global room_service, guest_service, booking_service, housekeeping_service
     
     room_repo = RepositoryFactory.create_room_repository(StorageType.MEMORY)
     guest_repo = RepositoryFactory.create_guest_repository(StorageType.MEMORY)
@@ -28,6 +31,7 @@ async def lifespan(app: FastAPI):
     room_service = RoomService(room_repo)
     guest_service = GuestService(guest_repo)
     booking_service = BookingService(booking_repo, room_repo, guest_repo)
+    housekeeping_service = HousekeepingService()
     
     yield
     
@@ -57,6 +61,7 @@ app.add_middleware(
 app.include_router(room_router, prefix="/api/rooms", tags=["Rooms"])
 app.include_router(guest_router, prefix="/api/guests", tags=["Guests"])
 app.include_router(booking_router, prefix="/api/bookings", tags=["Bookings"])
+app.include_router(housekeeping_router, prefix="/api/housekeeping", tags=["Housekeeping"])
 
 @app.get("/")
 async def root():
@@ -71,3 +76,6 @@ def get_guest_service() -> GuestService:
 
 def get_booking_service() -> BookingService:
     return booking_service
+
+def get_housekeeping_service() -> HousekeepingService:
+    return housekeeping_service
